@@ -10,7 +10,11 @@ export default function App() {
   return (
     <div>
       
+<<<<<<< HEAD
       
+=======
+      <Header/>
+>>>>>>> a6072326a2c6613500650fe13a847f2aa0f11ee7
       <Products/>
       
       
