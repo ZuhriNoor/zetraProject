@@ -1,12 +1,18 @@
+import React from 'react'
+import Header from './components/Header'
+import Sellform from './pages/Sellform'
+import Products from './pages/Products'
 
 
-function App() {
+
+
+export default function App() {
   return (
-    <div className="App">
-      <h1>Welcome</h1>
-      <h2>Well well well</h2>
+    <div>
+      
+      <Products/>
+      
+      
     </div>
-  );
+  )
 }
-
-export default App;
