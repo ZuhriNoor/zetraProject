@@ -1,23 +1,25 @@
-import React from 'react'
-import Header from './components/Header'
-import Sellform from './pages/Sellform'
-import Products from './pages/Products'
-
-
-
+import React from 'react';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Sellform from './pages/Sellform';
+import Products from './pages/Products';
+import ProductDetails from './pages/ProductDetails'; // Import the ProductDetails component
+import Home from './pages/Home'
 
 export default function App() {
   return (
-    <div>
+    <Router>
       
-<<<<<<< HEAD
+      <div>
+        <Header/>
+        <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/products" element={<Products/>} /> 
+        <Route path="/sell" element={<Sellform/>} />
+        <Route path="/product/:id" component={ProductDetails} />
+        </Routes>
+      </div>
       
-=======
-      <Header/>
->>>>>>> a6072326a2c6613500650fe13a847f2aa0f11ee7
-      <Products/>
-      
-      
-    </div>
-  )
+    </Router>
+  );
 }

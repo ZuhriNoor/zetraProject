@@ -5,9 +5,9 @@ function Sidebar() {
   return (
     <div className="sidenav">
       <h2>Navigation</h2>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
+      <a href="/">Home</a>
+      <a href="/products">Products</a>
+      <a href="/sell">Sell</a>
       <a href="#">Contact</a>
     </div>
   );
