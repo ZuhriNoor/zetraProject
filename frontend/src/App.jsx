@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Sellform from './pages/Sellform';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails'; // Import the ProductDetails component
@@ -11,7 +11,7 @@ export default function App() {
     <Router>
       
       <div>
-        <Header/>
+        <Navbar/>
         <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/products" element={<Products/>} /> 
