@@ -3,6 +3,8 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "../css/Products.css";
 import { FaSearch } from "react-icons/fa";
 
+
+
 const Menu = () => {
     const menu = [
         {
@@ -64,26 +66,15 @@ const Menu = () => {
     );
   };
 
-  const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-  };
-
-  const [cart, setCart] = useState([]);
-
-  const calculateTotalPrice = () => {
-    let total = 0;
-    for (const item of cart) {
-      const price = parseFloat(item.price.substring(3)); // Remove "Rs." and convert to number
-      total += price;
-    }
-    return total;
-  };
+ 
+ 
 
   const filteredMenu = menu.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
+    
     <div className="bdy">
       <div style={{ margin: "50px" }}>
         <Container>
@@ -109,9 +100,10 @@ const Menu = () => {
                   <Card.Body>
                     <Card.Title>{e.title}</Card.Title>
                     <Card.Text>{e.brand}</Card.Text>
-                    <Button variant="danger" onClick={() => addToCart(e)}>
-                      {e.price}
-                    </Button>
+                    <Card.Title>{e.price}</Card.Title>
+                    
+
+                    
                   </Card.Body>
                 </Card>
               </Col>
@@ -139,6 +131,7 @@ const Menu = () => {
         </Container>
       </div>
     </div>
+    
   );
 };
 
