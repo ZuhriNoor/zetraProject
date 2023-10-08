@@ -1,3 +1,14 @@
+import React from 'react'
+import Header from './components/Header'
+import Sellform from './pages/Sellform'
+import Products from './pages/Products'
+import FaqPage from './pages/FaqPage'
+import Service from './pages/Service'
+
+
+
+
+
 import React from 'react';
 import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -11,6 +22,12 @@ export default function App() {
   return (
     <Router>
       
+      
+      <Service/>
+      
+      
+  
+  )
       <div>
         <Navbar/>
         <Routes>
