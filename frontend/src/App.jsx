@@ -5,6 +5,7 @@ import Sellform from './pages/Sellform';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails'; // Import the ProductDetails component
 import Home from './pages/Home'
+import LoginPage from './pages/LoginPage';
 
 export default function App() {
   return (
@@ -17,6 +18,8 @@ export default function App() {
         <Route path="/products" element={<Products/>} /> 
         <Route path="/sell" element={<Sellform/>} />
         <Route path="/product/:id" component={ProductDetails} />
+        <Route path="/login" element={<LoginPage />} />
+        
         </Routes>
       </div>
       
