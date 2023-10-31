@@ -85,8 +85,9 @@ const Menu = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search in Laptops"
-              />
-              <FaSearch className="search-icon" />
+                />
+                <FaSearch className="search-icon" />
+              
             </div>
 
             <Row>

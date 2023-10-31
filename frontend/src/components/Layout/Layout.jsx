@@ -1,15 +1,15 @@
 import React from "react";
 import Footer from "./Footer";
-import {Toaster} from "react-hot-toast";
-import Navbar from "./Navbar"
+import Header from "./Header";
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
     <div>
-        <Toaster/>
-        <Navbar />
-      <main style={{ minHeight: "80vh" }}>{children}</main>
+      <Header />
+      <main style={{ minHeight: "70vh" }}>{children}</main>
       <Footer />
     </div>
   );
-}
+};
+
+export default Layout;
