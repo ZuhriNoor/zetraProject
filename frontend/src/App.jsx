@@ -4,12 +4,13 @@ import Sellform from "./pages/Sellform";
 import Products from "./pages/Products";
 import ProductDetails from "./pages/ProductDetails"; // Import the ProductDetails component
 import Home from "./pages/Home";
+import Error from "./pages/Error";
+import Help from "./pages/Help"
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
-import Error from "./pages/Error";
-import Services from "./pages/Services";
-import Help from "./pages/Help"
 import FaqPage from "./pages/FaqPage";
+import Services from "./pages/Services";
+
 
 export default function App() {
   return (
@@ -21,10 +22,12 @@ export default function App() {
             <Route path="/product/:id" component={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/services" element={<Services />} />
+            
             <Route path="/help" element={<Help />} />
             <Route path="/faq" element={<FaqPage />} />
+            <Route path="/services" element={<Services />} />
             <Route path="/*" element={<Error />} />
+            
           </Routes>
       </div>
   );
