@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import Layout from "../components/Layout/Layout"
 
 export default function ForgotPassPage() {
   return (
-    <div className='main'>
-      
-    </div>
-  )
+    <Layout title={"Reset Password"}>
+      <div className="main"></div>
+    </Layout>
+  );
 }

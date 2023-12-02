@@ -1,9 +1,5 @@
 
-.container {
-  display: flex;
-  justify-content:space-evenly;
- 
-}
+
 .box{
   margin-bottom: 40px;
   padding: 70px;

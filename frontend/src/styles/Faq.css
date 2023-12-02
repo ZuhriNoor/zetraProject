@@ -1,13 +1,5 @@
-/* Reset some default styles for consistency */
-body, h1, h2, p {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    width: 400px;
-    margin: 40px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-}
+
+
 .faq-box{
     margin-bottom: 30px;
     padding: 70px;
