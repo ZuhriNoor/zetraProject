@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/Service.css";
+import "../styles/Services.css";
 import Layout from "../components/Layout/Layout";
-const Service = () => {
+const Services = () => {
   return (
-    <Layout>
+    <Layout title={"Need Us?"}>
       <div className="service-page">
         <div className="container">
           <div className="box">box</div>
@@ -16,10 +16,10 @@ const Service = () => {
           <h3>Upgrade</h3>
         </div>
         <div className="text">
-          <h1>Service</h1>
+          <h1>Services</h1>
         </div>
       </div>
     </Layout>
   );
 };
-export default Service;
+export default Services;

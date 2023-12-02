@@ -42,7 +42,7 @@ export default function Login() {
 
 
   return (
-    <Layout>
+    <Layout title={"Login"}>
       <div className="register">
         <form className="row g-3" onSubmit={handleSubmit}>
           <div className="col-md-12">

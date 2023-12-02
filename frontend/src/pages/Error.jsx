@@ -4,7 +4,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function Error() {
   return (
-    <Layout>
+    <Layout title={"Oops!!"}>
       <div>
         <section class="page_404">
           <div class="container">

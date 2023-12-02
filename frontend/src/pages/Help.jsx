@@ -1,11 +1,11 @@
 import React from "react";
-import "./styles/Help.css";
+import "../styles/Help.css";
 import Form from "react-bootstrap/Form";
 import Layout from "../components/Layout/Layout";
 
 export default function AddForm() {
   return (
-    <Layout>
+    <Layout title={"Help Center"}>
       <div>
         <h1 className="h1" style={{ textAlign: "center", margin: "60px 0" }}>
           Help

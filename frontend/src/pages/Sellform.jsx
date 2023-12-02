@@ -6,7 +6,7 @@ import Layout from "../components/Layout/Layout";
 
 export default function AddForm() {
   return (
-    <Layout>
+    <Layout title={"Make some bucks"}>
       <div>
         <h4 className="h4">Include Some Details</h4>
         <div className="login-box">

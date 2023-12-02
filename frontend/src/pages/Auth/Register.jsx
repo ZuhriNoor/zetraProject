@@ -43,7 +43,7 @@ export default function Register() {
   };
 
   return (
-    <Layout>
+    <Layout title={"Register"}>
       <div className="register">
         <form className="row g-3" onSubmit={handleSubmit}>
           <div className="col-md-6">

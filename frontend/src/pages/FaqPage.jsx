@@ -6,7 +6,7 @@ import "../styles/Faq.css";
 
 function FaqPage() {
   return (
-    <Layout>
+    <Layout title={"FAQ"}>
       <div className="faq-page">
         <div className="faq-box">box</div>
         <h1 className="top-heading">Support & FAQs</h1>

@@ -75,7 +75,7 @@ const Menu = () => {
   );
 
   return (
-    <Layout>
+    <Layout title={"Products"}>
       <div className="bdy">
         <div style={{ margin: "50px" }}>
           <Container>
