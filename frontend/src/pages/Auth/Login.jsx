@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { useAuth } from "../../context/auth";
 
 export default function Login() {
 
@@ -10,6 +11,7 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
 
@@ -28,8 +30,14 @@ export default function Login() {
         `${process.env.REACT_APP_API}/api/v1/auth/login`,
         input
       );
-      if(res.data.success){
+      if(res && res.data.success){
         toast.success(res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data));
         navigate('/');
       } else {
         toast.error(res.data.message);
