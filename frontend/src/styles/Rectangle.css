@@ -1,0 +1,270 @@
+.rectangle {
+    width: 390px;
+}
+
+.rectangle .overlap {
+    background-color: #f1f2f3;
+    border-radius: 11px;
+    height: 34px;
+    left: 9px;
+    position: absolute;
+    top: 267px;
+    width: 373px;
+}
+
+.rectangle .text-wrapper {
+    color: #868080;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 16px;
+    font-weight: 400;
+    left: 43px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 6px;
+    width: 92px;
+}
+
+.rectangle .ri-search-line {
+    height: 26px;
+    left: 12px;
+    position: absolute;
+    top: 5px;
+    width: 23px;
+}
+
+.rectangle .overlap-group {
+    height: 64px;
+    left: 0;
+    position: absolute;
+    top: 327px;
+    width: 390px;
+}
+
+.rectangle .line {
+    height: 3px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 60px;
+    width: 390px;
+}
+
+.rectangle .div {
+    background-color: #f1f2f3;
+    border-radius: 17px;
+    height: 62px;
+    left: 9px;
+    position: absolute;
+    top: 0;
+    width: 369px;
+}
+
+.rectangle .icon-plus {
+    height: 21px;
+    left: 337px;
+    position: absolute;
+    top: 20px;
+    width: 23px;
+}
+
+.rectangle .overlap-2 {
+    height: 62px;
+    left: 2px;
+    position: absolute;
+    top: 528px;
+    width: 388px;
+}
+
+.rectangle .img {
+    height: 3px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 45px;
+    width: 388px;
+}
+
+.rectangle .div-2 {
+    background-color: #f1f2f3;
+    border-radius: 17px;
+    height: 62px;
+    left: 7px;
+    position: absolute;
+    top: 0;
+    width: 369px;
+}
+
+.rectangle .icon-plus-2 {
+    height: 21px;
+    left: 335px;
+    position: absolute;
+    top: 26px;
+    width: 23px;
+}
+
+.rectangle .overlap-3 {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 662px;
+    width: 390px;
+}
+
+.rectangle .line-2 {
+    height: 3px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 34px;
+    width: 390px;
+}
+
+.rectangle .icon-plus-3 {
+    height: 21px;
+    left: 337px;
+    position: absolute;
+    top: 22px;
+    width: 23px;
+}
+
+.rectangle .overlap-4 {
+    height: 68px;
+    left: 2px;
+    position: absolute;
+    top: 730px;
+    width: 388px;
+}
+
+.rectangle .line-3 {
+    height: 3px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 17px;
+    width: 388px;
+}
+
+.rectangle .img-2 {
+    height: 68px;
+    left: 7px;
+    position: absolute;
+    top: 0;
+    width: 369px;
+}
+
+.rectangle .icon-plus-4 {
+    height: 21px;
+    left: 335px;
+    position: absolute;
+    top: 19px;
+    width: 23px;
+}
+
+.rectangle .overlap-5 {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 595px;
+    width: 390px;
+}
+
+.rectangle .line-4 {
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: 45px;
+    width: 390px;
+}
+
+.rectangle .icon-plus-5 {
+    height: 21px;
+    left: 337px;
+    position: absolute;
+    top: 24px;
+    width: 23px;
+}
+
+.rectangle .overlap-6 {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 394px;
+    width: 390px;
+}
+
+.rectangle .line-5 {
+    height: 5px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 55px;
+    width: 390px;
+}
+
+.rectangle .overlap-group-2 {
+    height: 62px;
+    left: 0;
+    position: absolute;
+    top: 461px;
+    width: 390px;
+}
+
+.rectangle .line-6 {
+    height: 2px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 52px;
+    width: 390px;
+}
+
+.rectangle .icon-plus-6 {
+    height: 21px;
+    left: 337px;
+    position: absolute;
+    top: 15px;
+    width: 23px;
+}
+
+.rectangle .iconoir-nav-arrow {
+    height: 34px;
+    left: 17px;
+    position: absolute;
+    top: -14px;
+    width: 40px;
+}
+
+.rectangle .support-faqs {
+    color: #000000;
+    font-family: "Inter-Bold", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 91px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 4px;
+    width: 257px;
+}
+
+.rectangle .div-3 {
+    background-color: #06084a;
+    border-radius: 24px;
+    height: 193px;
+    left: 17px;
+    position: absolute;
+    top: 60px;
+    width: 361px;
+}
+
+.rectangle.default {
+    background-color: #ffffff;
+    height: 812px;
+    position: relative;
+}
+
+.rectangle.variant-2 {
+    background-color: #d9d9d9;
+    height: 786px;
+}

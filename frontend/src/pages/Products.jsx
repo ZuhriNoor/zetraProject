@@ -27,8 +27,8 @@ const Menu = () => {
       title: "Legion",
       image:
         "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Lenovo",
-      price: "Rs.69,000",
+      brand: "Lenovo Legion 5",
+      price: "Rs.99,900",
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ const Menu = () => {
       image:
         "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
       brand: "Apple",
-      price: "Rs.89,000",
+      price: "Rs.1,89,000",
     },
     {
       id: 5,

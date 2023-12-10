@@ -1,67 +1,38 @@
-
-
-.faq-box{
-    margin-bottom: 30px;
-    padding: 70px;
-    border-radius: 6px;
-    width: 158px;
-    background-color: #2B2D77;
-    color: #2B2D77;
-}
-
-.faq-page {
-    
-    max-width: 800px;
-    margin: 0 auto;
-   top:40;
-    width: 300px;
-    padding: 70px 70px 20px; /* Updated padding to push content down */
-    background-color: #f4f4f4;
-    position: relative; /* Add relative positioning to the container */
-}
-.top-heading {
-    position: absolute;
-    top: -10%;
-    left: 70%;
+.faq {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
-   
-    color: #0c0c0c;
-    padding: 20px;
-    margin: 0;
 }
 
-/* Style for each FAQ item */
-.faq-item {
-    background-color: #fff;
-    border: 2px solid #ddd;
-    margin-bottom: 50px;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.faq .rectangle-wrapper {
+    background-color: #ffffff;
+    height: 844px;
+    overflow: hidden;
+    width: 390px;
 }
 
-.faq-item:hover {
-    background-color: #9f9fa0;
+.faq .rectangle-2 {
+    border: 1px dashed;
+    border-color: #f1f2f6;
+    border-radius: 5px;
+    height: 842px;
+    left: -20px;
+    overflow: hidden;
+    position: relative;
+    top: 19px;
+    width: 430px;
 }
 
-
-.faq-item h3 {
-    font-size: 18px;
-    color: #0f0f0f;
-    margin-bottom: 5px;
+.faq .property-default {
+    left: 20px !important;
+    position: absolute !important;
+    top: 14px !important;
 }
 
-.faq-item p {
-    font-size: 16px;
-    color: #090909;
-    display: none; 
+.faq .property {
+    left: 20px !important;
+    position: absolute !important;
+    top: 826px !important;
 }
-
-
-.faq-item.open p {
-    display: block;
-
-
-}
-

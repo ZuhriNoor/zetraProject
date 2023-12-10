@@ -8,8 +8,9 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Error from "./pages/Error";
 import Services from "./pages/Services";
-import Help from "./pages/Help"
+import Help from "./pages/Help";
 import FaqPage from "./pages/FaqPage";
+import Selling from "./pages/Selling";
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
             <Route path="/sell" element={<Sellform />} />
+            <Route path="/selling" element={<Selling />} />
             <Route path="/product/:id" component={<ProductDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />

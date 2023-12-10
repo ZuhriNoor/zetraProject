@@ -1,201 +1,305 @@
+.sellform {
+  background-color: #f0f1f5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
 
-  .h4{
-    
-    text-align: center;
-  }
-  .login-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 400px;
-    margin: 40px;
-    padding: 40px;
-    transform: translate(-50%, -50%);
-    background: #2B2D77;
-    box-sizing: border-box;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
-  }
-  
-  .login-box h2 {
-    margin: 0 0 30px;
-    padding: 0;
-    color: #fff;
-    text-align: center;
-    
-  }
-  
-  .login-box .user-box {
-    position: relative;
-    
-  }
+.sellform .div {
+  background-color: #f0f1f5;
+  height: 844px;
+  position: relative;
+  width: 394px;
+}
 
-  .login-box .desc-box {
-    border-radius: 10px;
-    
-    height: 10rem;
-    
-    
-    
-    font-size: 16px;
-    
-    margin-left: 0;
-    margin-bottom: 30px;
-    border-top: 0.5px solid #585454;
-    border-bottom: 1px solid #b3acac;
-    outline: 1px  ;
-    
-    
-  }
-  
-  .login-box .radio {
-    position: relative;
-    color: #fff;
-    
-  }
+.sellform .overlap-group {
+  background-color: #2a2c77;
+  border-radius: 20px;
+  height: 393px;
+  left: 33px;
+  position: absolute;
+  top: 187px;
+  width: 329px;
+}
 
-  .login-box .image {
-    position:relative;
-    color: #fff;
-    margin-top: -50px;
-    margin-left: 10rem;
-    padding: 5px;
-  }
+.sellform .rectangle {
+  background-color: #f1f2f3;
+  border-radius: 9px;
+  height: 41px;
+  left: 20px;
+  position: absolute;
+  top: 36px;
+  width: 290px;
+}
 
-  .login-box .user-box input {
-    border-radius: 10px;
-    color: #000000;
-    
-    width: 100%;
-    padding: 10px 10px;
-    font-size: 16px;
-    
-    margin-left: 0;
-    margin-bottom: 30px;
-    border-top: 0.5px solid #585454;
-    border-bottom: 1px solid #b3acac;
-    outline: 1px  ;
-    
-  }
-  .login-box .user-box label {
-    position: absolute;
-    margin-left: 10px;;
-    left: 0;
-    padding: 0;
-    font-size: 20px;
-    color: #ffffff;
-    pointer-events: none;
-    transition: .5s;
-  }
-  
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
-    top: -25px;
-    left: 0;
-    color: #ffffff;
-    font-size: 15px;
-  }
-  
-  .login-box form a {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: #03e9f4;
-    font-size: 16px;
-    text-decoration: none;
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    margin-top: 40px;
-    letter-spacing: 4px
-  }
-  
-  .login-box a:hover {
-    background: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 100px #03e9f4;
-  }
-  
-  .login-box a span {
-    position: absolute;
-    display: block;
-  }
-  
-  .login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
-  }
-  
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: btn-anim2 1s linear infinite;
-    animation-delay: .25s
-  }
-  
-  @keyframes btn-anim2 {
-    0% {
-      top: -100%;
-    }
-    50%,100% {
-      top: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(3) {
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: btn-anim3 1s linear infinite;
-    animation-delay: .5s
-  }
-  
-  @keyframes btn-anim3 {
-    0% {
-      right: -100%;
-    }
-    50%,100% {
-      right: 100%;
-    }
-  }
-  
-  .login-box a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: btn-anim4 1s linear infinite;
-    animation-delay: .75s
-  }
-  
-  @keyframes btn-anim4 {
-    0% {
-      bottom: -100%;
-    }
-    50%,100% {
-      bottom: 100%;
-    }
-  }
+.sellform .rectangle-2 {
+  background-color: #f1f2f3;
+  border-radius: 9px;
+  height: 41px;
+  left: 20px;
+  position: absolute;
+  top: 113px;
+  width: 290px;
+}
+
+.sellform .rectangle-3 {
+  background-color: #f1f2f3;
+  border-radius: 9px;
+  height: 40px;
+  left: 20px;
+  position: absolute;
+  top: 188px;
+  width: 290px;
+}
+
+.sellform .rectangle-4 {
+  background-color: #f1f2f3;
+  border-radius: 9px;
+  height: 109px;
+  left: 20px;
+  position: absolute;
+  top: 264px;
+  width: 290px;
+}
+
+.sellform .text-wrapper {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 10px;
+  width: 82px;
+}
+
+.sellform .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 89px;
+  width: 82px;
+}
+
+.sellform .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 164px;
+  width: 146px;
+}
+
+.sellform .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  left: 26px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 240px;
+  width: 127px;
+}
+
+.sellform .text-wrapper-5 {
+  color: #2a2c77;
+  font-family: "Montserrat-Bold", Helvetica;
+  font-size: 15px;
+  font-weight: 700;
+  left: 53px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 613px;
+  width: 127px;
+}
+
+.sellform .text-wrapper-6 {
+  color: #2a2c77;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  left: 81px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 644px;
+  width: 127px;
+}
+
+.sellform .text-wrapper-7 {
+  color: #2a2c77;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 15px;
+  font-weight: 600;
+  height: 19px;
+  left: 81px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 676px;
+  width: 127px;
+}
+
+.sellform .text-wrapper-8 {
+  color: #000000;
+  font-family: "Inter-SemiBold", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 24px;
+  left: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 117px;
+  white-space: nowrap;
+}
+
+.sellform .ellipse {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 9.5px;
+  height: 19px;
+  left: 53px;
+  position: absolute;
+  top: 645px;
+  width: 19px;
+}
+
+.sellform .ellipse-2 {
+  background-color: #ffffff;
+  border: 1px solid;
+  border-color: #000000;
+  border-radius: 9.5px;
+  height: 19px;
+  left: 53px;
+  position: absolute;
+  top: 677px;
+  width: 19px;
+}
+
+.sellform .overlap {
+  height: 88px;
+  left: 249px;
+  position: absolute;
+  top: 606px;
+  width: 88px;
+}
+
+.sellform .img {
+  height: 86px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 88px;
+}
+
+.sellform .vector {
+  height: 20px;
+  left: 32px;
+  position: absolute;
+  top: 22px;
+  width: 24px;
+}
+
+.sellform .upload-images {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 10px;
+  font-weight: 600;
+  left: 7px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 48px;
+  width: 73px;
+}
+
+.sellform .div-wrapper {
+  background-color: #2a2c77;
+  border-radius: 27px;
+  height: 44px;
+  left: 105px;
+  position: absolute;
+  top: 741px;
+  width: 176px;
+}
+
+.sellform .text-wrapper-9 {
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold", Helvetica;
+  font-size: 16px;
+  font-weight: 600;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 10px;
+  white-space: nowrap;
+  width: 128px;
+}
+
+.sellform .overlap-2 {
+  height: 34px;
+  left: 37px;
+  position: absolute;
+  top: 46px;
+  width: 320px;
+}
+
+.sellform .ZECTRA {
+  color: transparent;
+  font-family: "Inria Sans-Bold", Helvetica;
+  font-size: 20px;
+  font-weight: 700;
+  height: 29px;
+  left: 71px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 179px;
+}
+
+.sellform .span {
+  color: #2429ac;
+}
+
+.sellform .text-wrapper-10 {
+  color: #000000;
+}
+
+.sellform .text-wrapper-11 {
+  color: #ea4600;
+}
+
+.sellform .text-wrapper-12 {
+  color: #db004f;
+}
+
+.sellform .group {
+  height: 33px;
+  left: 0;
+  position: absolute;
+  top: 1px;
+  width: 320px;
+}
