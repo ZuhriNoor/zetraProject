@@ -10,6 +10,7 @@ export default function Register() {
     email: "",
     password: "",
     address: "",
+    answer: "",
     phone: "",
   });
 
@@ -108,6 +109,19 @@ export default function Register() {
               type="text"
               className="form-control"
               name="phone"
+              value={input.phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="col-md-6">
+            <label htmlFor="question" className="form-label">
+              Your childhood friend name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="question"
               value={input.phone}
               onChange={handleChange}
               required

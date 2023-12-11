@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import toast from "react-hot-toast";
 import axios from "axios";
@@ -14,6 +14,7 @@ export default function Login() {
   const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,7 +39,7 @@ export default function Login() {
           token: res.data.token,
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
-        navigate('/');
+        navigate(location.state || '/');
       } else {
         toast.error(res.data.message);
       }
@@ -82,6 +83,11 @@ export default function Login() {
           <div className="col-12">
             <button type="submit" className="btn btn-primary">
               Login
+            </button>
+          </div>
+          <div className="col-12">
+            <button type="Button" className="btn btn-primary" onClick={() => {navigate("/forgot-password")}}>
+              Forgot Password?
             </button>
           </div>
         </form>
