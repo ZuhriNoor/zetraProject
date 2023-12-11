@@ -1,0 +1,193 @@
+.selling {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.selling .div {
+    background-color: #ffffff;
+    height: 844px;
+    position: relative;
+    width: 390px;
+}
+
+.selling .overlap-group {
+    background: linear-gradient(180deg, rgb(52.27, 55.48, 174.25) 0%, rgb(43, 45, 119) 100%);
+    border-radius: 13px;
+    height: 220px;
+    left: 22px;
+    position: absolute;
+    top: 186px;
+    width: 165px;
+}
+
+.selling .pngwing {
+    height: 143px;
+    left: 9px;
+    object-fit: cover;
+    position: absolute;
+    top: 39px;
+    width: 148px;
+}
+
+.selling .overlap {
+    background: linear-gradient(180deg, rgb(53, 56, 174) 0%, rgb(44, 46, 122) 100%);
+    border-radius: 13px;
+    height: 220px;
+    left: 203px;
+    position: absolute;
+    top: 360px;
+    width: 165px;
+}
+
+.selling .material-symbols {
+    height: 148px;
+    left: 21px;
+    position: absolute;
+    top: 36px;
+    width: 124px;
+}
+
+.selling .overlap-2 {
+   
+    background-size: 100% 100%;
+    height: 156px;
+    left: 23px;
+    position: absolute;
+    top: 424px;
+    width: 165px;
+}
+
+.selling .rectangle {
+    height: 156px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 165px;
+}
+
+.selling .img {
+    height: 129px;
+    left: 19px;
+    position: absolute;
+    top: 13px;
+    width: 128px;
+}
+
+.selling .pngwing-wrapper {
+    background: linear-gradient(180deg, rgb(53, 56, 174) 0%, rgb(44, 46, 121) 100%);
+    border-radius: 13px;
+    height: 156px;
+    left: 203px;
+    position: absolute;
+    top: 186px;
+    width: 165px;
+}
+
+.selling .pngwing-2 {
+    height: 126px;
+    left: 20px;
+    object-fit: cover;
+    position: absolute;
+    top: 15px;
+    width: 126px;
+}
+
+.selling .div-wrapper {
+    background-color: #2a2c77;
+    border-radius: 27px;
+    height: 44px;
+    left: 107px;
+    position: absolute;
+    top: 656px;
+    width: 176px;
+}
+
+.selling .text-wrapper {
+    color: #ffffff;
+    font-family: "Montserrat-SemiBold", Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    left: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    white-space: nowrap;
+    width: 128px;
+}
+
+.selling .overlap-3 {
+    background-color: #555555;
+    border-radius: 27px;
+    height: 44px;
+    left: 107px;
+    position: absolute;
+    top: 718px;
+    width: 176px;
+}
+
+.selling .text-wrapper-2 {
+    color: #000000;
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 20px;
+    font-weight: 600;
+    height: 24px;
+    left: 98px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 117px;
+    white-space: nowrap;
+}
+
+.selling .overlap-4 {
+    height: 34px;
+    left: 35px;
+    position: absolute;
+    top: 46px;
+    width: 320px;
+}
+
+.selling .ZECTRA {
+    color: transparent;
+    font-family: "Inria Sans-Bold", Helvetica;
+    font-size: 20px;
+    font-weight: 700;
+    height: 29px;
+    left: 71px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 179px;
+}
+
+.selling .span {
+    color: #2429ac;
+}
+
+.selling .text-wrapper-3 {
+    color: #000000;
+}
+
+.selling .text-wrapper-4 {
+    color: #ea4600;
+}
+
+.selling .text-wrapper-5 {
+    color: #db004f;
+}
+
+.selling .group {
+    height: 33px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 320px;
+}

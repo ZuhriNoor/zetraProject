@@ -10,9 +10,8 @@ import Error from "./pages/Error";
 import Services from "./pages/Services";
 import Help from "./pages/Help";
 import FaqPage from "./pages/FaqPage";
-import Dashboard from "./pages/user/Dashboard";
-import PrivateRoute from "./components/Routes/Private";
-import ForgotPassword from "./pages/Auth/ForgotPassword";
+import Selling from "./pages/Selling";
+
 
 export default function App() {
   return (
@@ -21,6 +20,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/sell" element={<Sellform />} />
+            <Route path="/selling" element={<Selling />} />
         <Route path="/product/:id" component={<ProductDetails />} />
 
         <Route path="/dashboard" element={<PrivateRoute />}>

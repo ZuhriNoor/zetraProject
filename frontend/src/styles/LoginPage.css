@@ -1,23 +1,450 @@
-*{
-    margin: 0;
-    padding: 0;
-
-}
-
-.main{
+.Login{
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
 }
 
-.lp-logo{
-    height: 100px;
-    width: 100px;
-    background-color: red;
-    margin-top: 10vh;
-}
-
-.lp-form{
+.Login.div {
+    background-color: #ffffff;
+    height: 844px;
+    overflow: hidden;
+    position: relative;
+    width: 390px;
+}.Login {
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Login .div {
+    background-color: #ffffff;
+    height: 844px;
+    overflow: hidden;
+    position: relative;
+    width: 390px;
+}
+
+.Login .text-wrapper {
+    color: #000000;
+    font-family: "Readex Pro-SemiBold", Helvetica;
+    font-size: 29px;
+    font-weight: 600;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 294px;
+    width: 93px;
+}
+
+.Login .overlap {
+    height: 93px;
+    left: 36px;
+    position: absolute;
+    top: 342px;
+    width: 328px;
+}
+
+.Login .text-wrapper-2 {
+    color: #000000;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 19px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 65px;
+    width: 64px;
+}
+
+.Login .p {
+    color: #8e8e8e;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 0;
+    width: 328px;
+}
+
+.Login .text-wrapper-3 {
+    color: #000000;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 19px;
+    font-weight: 500;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 511px;
+    width: 99px;
+}
+
+.Login .overlap-group {
+    background-color: #dadada;
+    border-radius: 27px;
+    height: 49px;
+    left: 26px;
+    position: absolute;
+    top: 437px;
+    width: 334px;
+}
+
+.Login .text-wrapper-4 {
+    color: #8e8e8e;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 17px;
+    font-weight: 300;
+    left: 27px;
+    letter-spacing: 0;
+    line-height: 17.5px;
+    position: absolute;
+    top: 15px;
+    width: 192px;
+}
+
+.Login .div-wrapper {
+    background-color: #dadada;
+    border-radius: 27px;
+    height: 49px;
+    left: 26px;
+    position: absolute;
+    top: 542px;
+    width: 334px;
+}
+
+.Login .rectangle {
+    height: 17px;
+    left: -2776px;
+    position: absolute;
+    top: -808px;
+    width: 92px;
+}
+
+.Login .img {
+    height: 17px;
+    left: -2776px;
+    position: absolute;
+    top: -692px;
+    width: 92px;
+}
+
+.Login .group {
+    height: 64px;
+    left: 26px;
+    position: absolute;
+    top: 662px;
+    width: 336px;
+}
+
+.Login .overlap-group-2 {
+    background-color: #080b5a;
+    border-radius: 27px;
+    height: 64px;
+    position: relative;
+    width: 334px;
+}
+
+.Login .text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 21px;
+    font-weight: 700;
+    left: 138px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+}
+
+.Login .text-wrapper-6 {
+    color: #8e8e8e;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 187px;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 614px;
+    width: 173px;
+}
+
+.Login .don-t-have-an {
+    color: transparent;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 47px;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 750px;
+    width: 306px;
+}
+
+.Login .span {
+    color: #8e8e8e;
+}
+
+.Login .text-wrapper-7 {
+    color: #080b5a;
+}
+
+.Login .ZECTRA {
+    color: transparent;
+    font-family: "Inria Sans-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    height: 65px;
+    left: 71px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 133px;
+    width: 257px;
+}
+
+.Login .text-wrapper-8 {
+    color: #2429ac;
+}
+
+.Login .text-wrapper-9 {
+    color: #000000;
+}
+
+.Login .text-wrapper-10 {
+    color: #ea4600;
+}
+
+.Login .text-wrapper-11 {
+    color: #db004f;
+}
+
+.Login .group-2 {
+    height: 26px;
+    left: 35px;
+    position: absolute;
+    top: 36px;
+    width: 25px;
+}
+
+
+.Login.text-wrapper {
+    color: #000000;
+    font-family: "Readex Pro-SemiBold", Helvetica;
+    font-size: 29px;
+    font-weight: 600;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 294px;
+    width: 93px;
+}
+
+.Login.overlap {
+    height: 93px;
+    left: 36px;
+    position: absolute;
+    top: 342px;
+    width: 328px;
+}
+
+.Login.text-wrapper-2 {
+    color: #000000;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 19px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 65px;
+    width: 64px;
+}
+
+.Login.p {
+    color: #8e8e8e;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 0;
+    width: 328px;
+}
+
+.Login.text-wrapper-3 {
+    color: #000000;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 19px;
+    font-weight: 500;
+    left: 34px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 511px;
+    width: 99px;
+}
+
+.Login.overlap-group {
+    background-color: #dadada;
+    border-radius: 27px;
+    height: 49px;
+    left: 26px;
+    position: absolute;
+    top: 437px;
+    width: 334px;
+}
+
+.Login.text-wrapper-4 {
+    color: #8e8e8e;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 17px;
+    font-weight: 300;
+    left: 27px;
+    letter-spacing: 0;
+    line-height: 17.5px;
+    position: absolute;
+    top: 15px;
+    width: 192px;
+}
+
+.Login.div-wrapper {
+    background-color: #dadada;
+    border-radius: 27px;
+    height: 49px;
+    left: 26px;
+    position: absolute;
+    top: 542px;
+    width: 334px;
+}
+
+.Login.rectangle {
+    height: 17px;
+    left: -2776px;
+    position: absolute;
+    top: -808px;
+    width: 92px;
+}
+
+.Login.img {
+    height: 17px;
+    left: -2776px;
+    position: absolute;
+    top: -692px;
+    width: 92px;
+}
+
+.Login.group {
+    height: 64px;
+    left: 26px;
+    position: absolute;
+    top: 662px;
+    width: 336px;
+}
+
+.Login.overlap-group-2 {
+    background-color: #080b5a;
+    border-radius: 27px;
+    height: 64px;
+    position: relative;
+    width: 334px;
+}
+
+.Login.text-wrapper-5 {
+    color: #ffffff;
+    font-family: "Poppins-Bold", Helvetica;
+    font-size: 21px;
+    font-weight: 700;
+    left: 138px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 16px;
+}
+
+.Login.text-wrapper-6 {
+    color: #8e8e8e;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 187px;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 614px;
+    width: 173px;
+}
+
+.Login.don-t-have-an {
+    color: transparent;
+    font-family: "Montserrat-Medium", Helvetica;
+    font-size: 18px;
+    font-weight: 500;
+    left: 47px;
+    letter-spacing: 0;
+    line-height: 18.5px;
+    position: absolute;
+    top: 750px;
+    width: 306px;
+}
+
+.Login.span {
+    color: #8e8e8e;
+}
+
+.Login.text-wrapper-7 {
+    color: #080b5a;
+}
+
+.Login.ZECTRA {
+    color: transparent;
+    font-family: "Inria Sans-Bold", Helvetica;
+    font-size: 40px;
+    font-weight: 700;
+    height: 65px;
+    left: 71px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 133px;
+    width: 257px;
+}
+
+.Login.text-wrapper-8 {
+    color: #2429ac;
+}
+
+.Login.text-wrapper-9 {
+    color: #000000;
+}
+
+.Login.text-wrapper-10 {
+    color: #ea4600;
+}
+
+.Login.text-wrapper-11 {
+    color: #db004f;
+}
+
+.Login.group-2 {
+    height: 26px;
+    left: 35px;
+    position: absolute;
+    top: 36px;
+    width: 25px;
 }
