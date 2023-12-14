@@ -63,6 +63,7 @@ const Header = () => {
                       Register
                     </NavLink>
                   </li>
+                  
                   <li className="nav-item">
                     <NavLink to="/login" className="nav-link">
                       Login
@@ -71,7 +72,7 @@ const Header = () => {
                 </>
               ) : (
                 <>
-                  <li className="nav-item dropdown">
+                   <li className="nav-item dropdown">
                     <NavLink
                       className="nav-link dropdown-toggle"
                       href="#"
@@ -81,10 +82,14 @@ const Header = () => {
                     >
                       {auth?.user?.name}
                     </NavLink>
-
                     <ul className="dropdown-menu">
                       <li>
-                        <NavLink to="/dashboard" className="dropdown-item">
+                        <NavLink
+                          to={`/dashboard/${
+                            auth?.user?.role === 1 ? "admin" : "user"
+                          }`}
+                          className="dropdown-item"
+                        >
                           Dashboard
                         </NavLink>
                       </li>
@@ -101,6 +106,7 @@ const Header = () => {
                   </li>
                 </>
               )}
+                
               <li className="nav-item">
                 <NavLink to="/help" className="nav-link ">
                   Help
