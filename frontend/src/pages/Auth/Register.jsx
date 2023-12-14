@@ -11,6 +11,7 @@ export default function Register() {
     email: "",
     password: "",
     address: "",
+    answer: "",
     phone: "",
   });
 
@@ -114,6 +115,19 @@ export default function Register() {
               required
             />
           </div>
+          <div className="col-md-6">
+            <label htmlFor="answer" className="form-label">
+              Your childhood friend name
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              name="answer"
+              value={input.answer}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
           <div className="col-12">
             <div className="form-check">
@@ -136,6 +150,5 @@ export default function Register() {
         </form>
       </div>
     </Layout>
- 
-};
 
+}

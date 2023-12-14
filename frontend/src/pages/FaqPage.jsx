@@ -1,9 +1,11 @@
 import React from "react";
 import { Rectangle } from "./Rectangle";
 import "../styles/Faq.css";
+import Layout from "../components/Layout/Layout";
 
 const FaqPage = () => {
     return (
+        <Layout title={"FAQ"}>
         <div className="faq">
             <div className="rectangle-wrapper">
                 <div className="rectangle-2">
@@ -12,6 +14,7 @@ const FaqPage = () => {
                 </div>
             </div>
         </div>
+        </Layout>
     );
 };
 export default FaqPage;

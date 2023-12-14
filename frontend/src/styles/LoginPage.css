@@ -111,6 +111,17 @@
     width: 192px;
 }
 
+
+.Login .overlap-group input::placeholder {
+    color: #8e8e8e;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 17.5px;
+  }
+  
+
 .Login .div-wrapper {
     background-color: #dadada;
     border-radius: 27px;
@@ -120,6 +131,15 @@
     top: 542px;
     width: 334px;
 }
+
+.Login .div-wrapper input::placeholder {
+    color: #8e8e8e;
+    font-family: "Poppins-Light", Helvetica;
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 17.5px;
+  }
 
 .Login .rectangle {
     height: 17px;
@@ -153,17 +173,25 @@
     width: 334px;
 }
 
-.Login .text-wrapper-5 {
-    color: #ffffff;
-    font-family: "Poppins-Bold", Helvetica;
-    font-size: 21px;
+.Login .group .text-wrapper-5 button {
+    width: 300px; 
+    font-size: 15px;
     font-weight: 700;
-    left: 138px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 16px;
-}
+    
+    background-color: #080b5a; 
+    color: #ffffff; 
+    border: none;
+    padding: 15px; 
+    cursor: pointer;
+    border-radius: 27px;
+  }
+  
+  /* Optionally, you can add a hover effect to the button */
+  .Login .group .text-wrapper-5 button:hover {
+    background-color: #45a049; /* Change the hover background color as needed */
+  }
+
+
 
 .Login .text-wrapper-6 {
     color: #8e8e8e;
@@ -176,6 +204,7 @@
     position: absolute;
     top: 614px;
     width: 173px;
+    cursor: pointer;
 }
 
 .Login .don-t-have-an {
@@ -197,6 +226,7 @@
 
 .Login .text-wrapper-7 {
     color: #080b5a;
+    cursor: pointer;
 }
 
 .Login .ZECTRA {
@@ -299,15 +329,16 @@
     width: 99px;
 }
 
-.Login.overlap-group {
-    background-color: #dadada;
-    border-radius: 27px;
-    height: 49px;
-    left: 26px;
-    position: absolute;
-    top: 437px;
-    width: 334px;
-}
+
+.Login .overlap-group input {
+    background-color: #dadada; 
+    border: none; 
+    border-radius: 27px; 
+    height: 46px; 
+    width: 334px;     
+    font-size: 17px;
+  }
+  
 
 .Login.text-wrapper-4 {
     color: #8e8e8e;
@@ -322,15 +353,14 @@
     width: 192px;
 }
 
-.Login.div-wrapper {
-    background-color: #dadada;
-    border-radius: 27px;
-    height: 49px;
-    left: 26px;
-    position: absolute;
-    top: 542px;
-    width: 334px;
-}
+.Login .div-wrapper input {
+    background-color: #dadada; 
+    border: none; 
+    border-radius: 27px; 
+    height: 46px; 
+    width: 334px;     
+    font-size: 17px;
+  }
 
 .Login.rectangle {
     height: 17px;
