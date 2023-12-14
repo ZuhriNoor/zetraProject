@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "../styles/Help.css";
+import Layout from "../components/Layout/Layout";
 
 const Help = () => {
 
     return (
+        <Layout title={"Help"}>
         <div className="help">
             <div className="div">
                 <div className="overlap-group">
@@ -35,6 +37,7 @@ const Help = () => {
                 <div className="text-wrapper-6">Help</div>
             </div>
         </div>
+        </Layout>
     );
 };
 export default Help;

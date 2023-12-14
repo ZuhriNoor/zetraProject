@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/Services.css";
+import Layout from "../components/Layout/Layout";
 
 const Services = () => {
     return (
+        <Layout title={"Zetra"}>
         <div className="services">
             <div className="div">
                 <img className="vector" alt="Vector" src="vector.svg" />
@@ -24,6 +26,7 @@ const Services = () => {
                 <div className="text-wrapper-5">Need help?</div>
             </div>
         </div>
+        </Layout>
     );
 };
 export default Services;

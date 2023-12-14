@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/Sellform.css";
+import Layout from "../components/Layout/Layout";
 
 const Sellform = () => {
     return (
+        <Layout title={"Sell"}>
         <div className="sellform">
             <div className="div">
                 <div className="overlap-group">
@@ -44,6 +46,7 @@ const Sellform = () => {
                 </div>
             </div>
         </div>
+        </Layout>
     );
 };
 export default Sellform;
