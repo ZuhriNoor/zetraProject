@@ -115,14 +115,14 @@ export default function Register() {
             />
           </div>
           <div className="col-md-6">
-            <label htmlFor="question" className="form-label">
+            <label htmlFor="answer" className="form-label">
               Your childhood friend name
             </label>
             <input
               type="text"
               className="form-control"
-              name="question"
-              value={input.phone}
+              name="answer"
+              value={input.answer}
               onChange={handleChange}
               required
             />

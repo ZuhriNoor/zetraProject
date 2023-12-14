@@ -11,6 +11,9 @@ import Services from "./pages/Services";
 import Help from "./pages/Help";
 import FaqPage from "./pages/FaqPage";
 import Selling from "./pages/Selling";
+import PrivateRoute from "./components/Routes/Private";
+import Dashboard from "./pages/user/Dashboard";
+import ForgotPassword from "./pages/Auth/ForgotPassword"
 
 
 export default function App() {
