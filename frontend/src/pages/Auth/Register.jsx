@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import toast from "react-hot-toast";
 import axios from "axios";
+import "../../styles/Register.css";
 
 export default function Register() {
   const [input, setInput] = useState({
@@ -42,7 +43,7 @@ export default function Register() {
     }
   };
 
-  return (
+
     <Layout title={"Register"}>
       <div className="register">
         <form className="row g-3" onSubmit={handleSubmit}>
@@ -135,5 +136,6 @@ export default function Register() {
         </form>
       </div>
     </Layout>
-  );
-}
+ 
+};
+
