@@ -1,5 +1,5 @@
 .sellform {
-  background-color: #f0f1f5;
+  background-color: #ffffff;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -7,11 +7,26 @@
 }
 
 .sellform .div {
-  background-color: #f0f1f5;
+  background-color: #ffffff;
   height: 844px;
   position: relative;
   width: 394px;
 }
+
+.sellform .input-field {
+  width: 260px;
+  height: 20px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  position: absolute;
+  left: 12px;
+  top: 5px;
+}
+
+
+
 
 .sellform .overlap-group {
   background-color: #2a2c77;
@@ -23,8 +38,8 @@
   width: 329px;
 }
 
-.sellform .rectangle {
-  background-color: #f1f2f3;
+ .sellform .rectangle {
+  background-color: #2a2c77;
   border-radius: 9px;
   height: 41px;
   left: 20px;
@@ -34,7 +49,7 @@
 }
 
 .sellform .rectangle-2 {
-  background-color: #f1f2f3;
+  background-color: #2a2c77;
   border-radius: 9px;
   height: 41px;
   left: 20px;
@@ -44,7 +59,7 @@
 }
 
 .sellform .rectangle-3 {
-  background-color: #f1f2f3;
+  background-color: #2a2c77;
   border-radius: 9px;
   height: 40px;
   left: 20px;
@@ -54,13 +69,23 @@
 }
 
 .sellform .rectangle-4 {
-  background-color: #f1f2f3;
+  background-color: #2a2c77;
   border-radius: 9px;
   height: 109px;
   left: 20px;
   position: absolute;
   top: 264px;
   width: 290px;
+} 
+.sellform .rectangle .input-field::placeholder {
+  color: rgba(0, 0, 0, 0.416);
+}
+.sellform .rectangle-2 .input-field::placeholder {
+  color: rgba(0, 0, 0, 0.416); 
+}.sellform .rectangle-3 .input-field::placeholder {
+  color: rgba(0, 0, 0, 0.416); 
+}.sellform .rectangle-4 .input-field::placeholder {
+  color: rgba(0, 0, 0, 0.416); 
 }
 
 .sellform .text-wrapper {
@@ -170,29 +195,50 @@
   white-space: nowrap;
 }
 
-.sellform .ellipse {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 9.5px;
-  height: 19px;
-  left: 53px;
-  position: absolute;
-  top: 645px;
-  width: 19px;
+/* Update the existing styles to visually represent checkboxes as radio buttons */
+
+/* Hide the default checkboxes */
+.sellform input[type="checkbox"] {
+  display: none;
 }
 
+/* Styling for the custom radio buttons */
+.sellform .ellipse,
 .sellform .ellipse-2 {
-  background-color: #ffffff;
-  border: 1px solid;
-  border-color: #000000;
-  border-radius: 9.5px;
+  border-radius: 50%; /* Makes the div appear as a circle */
   height: 19px;
-  left: 53px;
-  position: absolute;
-  top: 677px;
   width: 19px;
+  display: inline-block;
+  margin-right: 8px; /* Spacing between the radio button and text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative; /* Needed for absolute positioning of the checkmark */
+  vertical-align: middle;
+  border: 1px solid #000; /* Border for the radio button */
 }
+
+/* Styling for the unchecked state of the radio button */
+.sellform .ellipse::after,
+.sellform .ellipse-2::after {
+  content: ''; /* Empty content */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px; /* Adjust the size of the inner circle */
+  height: 9px; /* Adjust the size of the inner circle */
+  border-radius: 50%; /* Make it a circle */
+  background-color: transparent; /* Background color for the inner circle */
+}
+
+/* Styling for the checked state of the radio button */
+.sellform .ellipse.checked::after,
+.sellform .ellipse-2.checked::after {
+  background-color: #353faa; /* Change background color when checked */
+}
+
+
+
 
 .sellform .overlap {
   height: 88px;
