@@ -17,3 +17,10 @@
 .register {
   padding: 200px;
 }
+
+
+/* ==================== */
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}

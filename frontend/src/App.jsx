@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Sellform from "./pages/Sellform";
-import Products from "./pages/Products";
+import Productsold from "./pages/Productsold";
 import ProductDetails from "./pages/ProductDetails"; // Import the ProductDetails component
 import Home from "./pages/Home";
 import Login from "./pages/Auth/Login";
@@ -17,10 +17,13 @@ import AdminRoute from "./components/Routes/AdminRoute";
 import AdminDashboard from "./pages/Admin/AdminDashboard";
 import CreateCategory from "./pages/Admin/CreateCategory";
 import CreateProduct from "./pages/Admin/CreateProduct";
+import UpdateProduct from "./pages/Admin/UpdateProduct";
 import Users from "./pages/Admin/Users";
 import Profile from "./pages/user/Profile";
 import Orders from "./pages/user/Orders";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
+import Products from "./pages/Admin/Products";
+
 
 export default function App() {
   return (
@@ -36,9 +39,11 @@ export default function App() {
           <Route path="admin" element={<AdminDashboard />} />
           <Route path="admin/create-category" element={<CreateCategory />} />
           <Route path="admin/create-product" element={<CreateProduct />} />
+          <Route path="admin/product/:slug" element={<UpdateProduct />} />
+          <Route path="admin/products" element={<Products />} />          
           <Route path="admin/users" element={<Users />} />
         </Route>
-            <Route path="/products" element={<Products />} />
+            <Route path="/productsold" element={<Productsold />} />
             <Route path="/sell" element={<Sellform />} />
             <Route path="/selling" element={<Selling />} />
             <Route path="/product/:id" component={<ProductDetails />} />
