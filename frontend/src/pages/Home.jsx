@@ -11,7 +11,6 @@ export default function Home() {
     <Layout title={"Zetra"}>
       <div className="hm">
         <h1>HomePage</h1>
-        <pre>{JSON.stringify(auth, null, 4)}</pre>
       </div>
     </Layout>
   );

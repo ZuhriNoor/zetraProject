@@ -1,135 +1,195 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import "../styles/Products.css";
-import { FaSearch } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 
-const Menu = () => {
-  const menu = [
-    {
-      id: 1,
-      title: "Alienware",
-      image:
-        "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Dell",
-      price: "Rs.99,000",
-    },
-    {
-      id: 2,
-      title: "Tuf",
-      image:
-        "https://imgs.search.brave.com/04Aoc9-NU6USfCE70gpBwP8xO9EdGOmsfbeedk8o-GQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9wbHVz/cG5nLmNvbS9pbWct/cG5nL2xhcHRvcC1w/bmctaGQtZm9yLXdv/cmstdXNlLWl0LWFz/LWEtbm9ybWFsLWxh/cHRvcC1mb3ItZ2Ft/ZXMtdHVybi1pdC1p/bnRvLTY1Ny5wbmc",
-      brand: "Asus",
-      price: "Rs.59,000",
-    },
-    {
-      id: 3,
-      title: "Legion",
-      image:
-        "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Lenovo Legion 5",
-      price: "Rs.99,900",
-    },
-    {
-      id: 4,
-      title: "Macbook Air",
-      image:
-        "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Apple",
-      price: "Rs.1,89,000",
-    },
-    {
-      id: 5,
-      title: "Surface Laptop 4",
-      image:
-        "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Microsoft",
-      price: "Rs.79,000",
-    },
-    {
-      id: 6,
-      title: "Inspiron",
-      image:
-        "https://imgs.search.brave.com/yufH-Wv25VJu-fZVm7IvnUy_r02zxoYsK7_iC7KYaTY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYXJ0cy5jb20v/ZmlsZXMvMTIvQWxp/ZW53YXJlLUxhcHRv/cC1QTkctUGljdHVy/ZS5wbmc",
-      brand: "Dell",
-      price: "Rs.49,000",
-    },
-    // Add more products here
-  ];
+import axios from "axios";
+import { Checkbox, Radio } from "antd";
+import { Prices } from "../components/Prices";
+const HomePage = () => {
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [checked, setChecked] = useState([]);
+  const [radio, setRadio] = useState([]);
+  const [total, setTotal] = useState(0);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
-  const [index, setIndex] = useState(0);
-  const [searchTerm, setSearchTerm] = useState("");
-
-  const handlePrev = () => {
-    setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 6 : 0));
+  //get all cat
+  const getAllCategory = async () => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/category/get-category`
+      );
+      if (data?.success) {
+        setCategories(data?.category);
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
-  const handleNext = () => {
-    setIndex((prevIndex) =>
-      prevIndex < menu.length - 6 ? prevIndex + 6 : prevIndex
-    );
+  useEffect(() => {
+    getAllCategory();
+    getTotal();
+    // eslint-disable-next-line
+  }, []);
+
+  //get products
+  const getAllProducts = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+      );
+      setLoading(false);
+      setProducts(data.products);
+    } catch (error) {
+      setLoading(false);
+      console.log(error);
+    }
   };
 
-  const filteredMenu = menu.filter((item) =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  //getTOtal COunt
+  const getTotal = async () => {
+    try {
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-count`
+      );
+      setTotal(data?.total);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
+  useEffect(() => {
+    if (page === 1) return;
+    loadMore();
+    // eslint-disable-next-line
+  }, [page]);
+  //load more
+  const loadMore = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/product/product-list/${page}`
+      );
+      setLoading(false);
+      setProducts([...products, ...data?.products]);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  };
+
+  // filter by cat
+  const handleFilter = (value, id) => {
+    let all = [...checked];
+    if (value) {
+      all.push(id);
+    } else {
+      all = all.filter((c) => c !== id);
+    }
+    setChecked(all);
+  };
+  useEffect(() => {
+    if (!checked.length || !radio.length) {getAllProducts()};
+    // eslint-disable-next-line
+  }, [checked.length, radio.length]);
+
+  useEffect(() => {
+    if (checked.length || radio.length) {filterProduct()};
+    // eslint-disable-next-line
+  }, [checked, radio]);
+
+  //get filterd product
+  const filterProduct = async () => {
+    try {
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/product/product-filters`,
+        {
+          checked,
+          radio,
+        }
+      );
+      setProducts(data?.products);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
-    <Layout title={"Products"}>
-      <div className="bdy">
-        <div style={{ margin: "50px" }}>
-          <Container>
-            <div className="search-bar">
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search in Laptops"
-                />
-                <FaSearch className="search-icon" />
-              
-            </div>
-
-            <Row>
-              {filteredMenu.slice(index, index + 6).map((e) => (
-                <Col key={e.id}>
-                  <Card style={{ width: "18rem" }}>
-                    <Card.Img
-                      variant="top"
-                      style={{ height: "150px" }}
-                      src={e.image}
-                    />
-                    <Card.Body>
-                      <Card.Title>{e.title}</Card.Title>
-                      <Card.Text>{e.brand}</Card.Text>
-                      <Card.Title>{e.price}</Card.Title>
-                    </Card.Body>
-                  </Card>
-                </Col>
+    <Layout title={"All Products - Best offers "}>
+      <div className="container-fluid row mt-3">
+        <div className="col-md-2">
+          <h4 className="text-center">Filter By Category</h4>
+          <div className="d-flex flex-column">
+            {categories?.map((c) => (
+              <Checkbox
+                key={c._id}
+                onChange={(e) => handleFilter(e.target.checked, c._id)}
+              >
+                {c.name}
+              </Checkbox>
+            ))}
+          </div>
+          {/* price filter */}
+          <h4 className="text-center mt-4">Filter By Price</h4>
+          <div className="d-flex flex-column">
+            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+              {Prices?.map((p) => (
+                <div key={p._id}>
+                  <Radio value={p.array}>{p.name}</Radio>
+                </div>
               ))}
-            </Row>
-
-            <div className="carousel-buttons">
-              <Button
-                variant="secondary"
-                onClick={handlePrev}
-                disabled={index === 0}
+            </Radio.Group>
+          </div>
+          <div className="d-flex flex-column">
+            <button
+              className="btn btn-danger"
+              onClick={() => window.location.reload()}
+            >
+              RESET FILTERS
+            </button>
+          </div>
+        </div>
+        <div className="col-md-9">
+          <h1 className="text-center">All Products</h1>
+          <div className="d-flex flex-wrap">
+            {products?.map((p) => (
+              <div className="card m-2" style={{ width: "18rem" }}>
+                <img
+                  src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
+                  className="card-img-top"
+                  alt={p.name}
+                  style={{width: "10rem", height: "10rem"}}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{p.name}</h5>
+                  <p className="card-text">
+                    {p.description.substring(0, 60)}...
+                  </p>
+                  <p className="card-text"> $ {p.price}</p>
+                  <button className="btn btn-primary ms-1">More Details</button>
+                  <button className="btn btn-secondary ms-1">ADD TO CART</button>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="m-2 p-3">
+            {products && products.length < total && (
+              <button
+                className="btn btn-warning"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPage(page + 1);
+                }}
               >
-                Prev
-              </Button>
-              <Button
-                variant="secondary"
-                onClick={handleNext}
-                disabled={index >= filteredMenu.length - 6}
-              >
-                Next
-              </Button>
-            </div>
-          </Container>
+                {loading ? "Loading ..." : "Loadmore"}
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </Layout>
   );
 };
 
-export default Menu;
+export default HomePage;

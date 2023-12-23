@@ -21,6 +21,7 @@ const Products = () => {
   //lifecycle method
   useEffect(() => {
     getAllProducts();
+    // eslint-disable-next-line
   }, []);
   return (
     <Layout>
@@ -42,7 +43,7 @@ const Products = () => {
                     src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                     className="card-img-top"
                     alt={p.name}
-                    
+                    style={{width: "13rem", height: "13rem"}}
                   />
                   <div className="card-body">
                     <h5 className="card-title">{p.name}</h5>

@@ -43,7 +43,7 @@ export default function Register() {
       toast.error("Something went wrong");
     }
   };
-
+  return (
 
     <Layout title={"Register"}>
       <div className="register">
@@ -150,5 +150,5 @@ export default function Register() {
         </form>
       </div>
     </Layout>
-
+  )
 }
