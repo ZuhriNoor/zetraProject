@@ -1,8 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Sellform from "./pages/Sellform";
-import Productsold from "./pages/Productsold";
-import ProductDetails from "./pages/ProductDetails"; // Import the ProductDetails component
+import Productsold from "./pages/Products";
 import Home from "./pages/Home";
 import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
@@ -23,12 +22,16 @@ import Profile from "./pages/user/Profile";
 import Orders from "./pages/user/Orders";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import Products from "./pages/Admin/Products";
+import Search from "./pages/Search";
+import ProductDetails from "./pages/ProductDetails";
 
 export default function App() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/product/:slug" element={<ProductDetails />} />
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/orders" element={<Orders />} />
@@ -45,7 +48,6 @@ export default function App() {
         <Route path="/productsold" element={<Productsold />} />
         <Route path="/sell" element={<Sellform />} />
         <Route path="/selling" element={<Selling />} />
-        <Route path="/product/:id" component={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
