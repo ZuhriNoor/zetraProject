@@ -11,7 +11,9 @@ const ProductDetails = () => {
   //initalp details
   useEffect(() => {
     if (params?.slug) getProduct();
+    // eslint-disable-next-line
   }, [params?.slug]);
+
   //getProduct
   const getProduct = async () => {
     try {
@@ -69,6 +71,7 @@ const ProductDetails = () => {
                 src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p?._id}`}
                 className="card-img-top"
                 alt={p.name}
+                style={{width: "10rem", height: "10rem"}}
               />
               <div className="card-body">
                 <h5 className="card-title">{p.name}</h5>
