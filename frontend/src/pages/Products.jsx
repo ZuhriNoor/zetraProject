@@ -4,9 +4,12 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
+import toast from "react-hot-toast";
+import { useCart } from "../context/cart";
 const HomePage = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useCart();
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
@@ -92,12 +95,16 @@ const HomePage = () => {
     setChecked(all);
   };
   useEffect(() => {
-    if (!checked.length || !radio.length) {getAllProducts()};
+    if (!checked.length || !radio.length) {
+      getAllProducts();
+    }
     // eslint-disable-next-line
   }, [checked.length, radio.length]);
 
   useEffect(() => {
-    if (checked.length || radio.length) {filterProduct()};
+    if (checked.length || radio.length) {
+      filterProduct();
+    }
     // eslint-disable-next-line
   }, [checked, radio]);
 
@@ -160,7 +167,7 @@ const HomePage = () => {
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
-                  style={{width: "10rem", height: "10rem"}}
+                  style={{ width: "10rem", height: "10rem" }}
                 />
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>
@@ -174,7 +181,19 @@ const HomePage = () => {
                   >
                     More Details
                   </button>
-                  <button className="btn btn-secondary ms-1">ADD TO CART</button>
+                  <button
+                    className="btn btn-secondary ms-1"
+                    onClick={() => {
+                      setCart([...cart, p]);
+                      localStorage.setItem(
+                        "cart",
+                        JSON.stringify([...cart, p])
+                      );
+                      toast.success("Item Added to cart");
+                    }}
+                  >
+                    ADD TO CART
+                  </button>
                 </div>
               </div>
             ))}
