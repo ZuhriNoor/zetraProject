@@ -9,7 +9,6 @@ import Error from "./pages/Error";
 import Services from "./pages/Services";
 import Help from "./pages/Help";
 import FaqPage from "./pages/FaqPage";
-import Selling from "./pages/Selling";
 import Dashboard from "./pages/user/Dashboard";
 import PrivateRoute from "./components/Routes/Private";
 import AdminRoute from "./components/Routes/AdminRoute";
@@ -53,7 +52,6 @@ export default function App() {
         </Route>
         <Route path="/productsold" element={<Productsold />} />
         <Route path="/sell" element={<Sellform />} />
-        <Route path="/selling" element={<Selling />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

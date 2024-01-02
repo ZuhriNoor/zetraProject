@@ -89,6 +89,7 @@ const Header = () => {
                       All Categories
                     </Link>
                   </li>
+                  
                   {categories?.map((c) => (
                     <li>
                       <Link
