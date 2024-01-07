@@ -16,21 +16,22 @@ const CartPage = () => {
   const navigate = useNavigate();
 
   //total price
-  const totalPrice = () => {
-    try {
-      let total = 0;
-      // eslint-disable-next-line
-      cart?.map((item) => {
-        total = total + item.price;
-      });
-      return total.toLocaleString("en-US", {
-        style: "currency",
-        currency: "USD",
-      });
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const totalPrice = () => {
+  try {
+    let total = 0;
+    // eslint-disable-next-line
+    cart?.map((item) => {
+      total = total + item.price;
+    });
+    return total.toLocaleString("en-IN", {
+      style: "currency",
+      currency: "INR",
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
   //detele item
   const removeCartItem = (pid) => {
     try {
