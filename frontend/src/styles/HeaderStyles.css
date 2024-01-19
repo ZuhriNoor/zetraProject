@@ -1,0 +1,52 @@
+/* HeaderStyles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: .8rem;
+  }
+  
+  .navbar-toggler-icon {
+    font-size: 1rem;
+  }
+  
+  .dropdown-menu {
+    font-size: 0.8rem;
+  }
+  
+  .cart-icon {
+    max-height: 25px;
+  }
+  
+  .input-group {
+    border: 1px solid #5a7796;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .btn-outline-secondary {
+    border: 1px solid #ffffff;
+    border-radius: 0 50px 50px 0;
+  }
+  
+  .input-group {
+    display: flex; /* Use flexbox for better alignment */
+    border: 1px solid #5a7796;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+  
+  .form-control {
+    flex: 10; /* Take up remaining space in the flex container */
+    border: none; /* Remove input border */
+    padding: 50px;
+    font-size: 13px;
+  }
+  
+  
