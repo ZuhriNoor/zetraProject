@@ -1,3 +1,5 @@
+// Home.jsx
+
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -82,17 +84,21 @@ const Home = () => {
           <h1 className="featured-products-heading">Featured Products</h1>
           <Slider {...productCarouselSettings}>
             {products.map((product) => (
-              <Link key={product._id} to={`/product/${product.slug}`}>
-                <div className="card m-2" style={{ width: "18rem" }}>
+              <Link
+                key={product._id}
+                to={`/product/${product.slug}`}
+                className="text-decoration-none"
+              >
+                <div className="card m-2" style={{ width: "18rem", height:"20rem", margin: "0 10px" }}>
                   <img
                     src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
-                    className="card-img-top"
+                    className="card-img-top mx-auto" // Apply mx-auto class for centering
                     alt={product.name}
                     style={{ width: "10rem", height: "10rem" }}
                   />
-                  <div className="card-body">
+                  <div className="card-body" style={{ width: "15rem", height:"5rem" }}>
                     <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.description.substring(0, 60)}...</p>
+                    <p className="card-text">{product.description.substring(0, 30)}...</p>
                     <p className="card-text"> ₹ {product.price}</p>
                   </div>
                 </div>
