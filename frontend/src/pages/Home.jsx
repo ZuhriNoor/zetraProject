@@ -3,10 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Layout from "../components/Layout/Layout";
-import { useAuth } from "../context/auth";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
-// Utility function to fetch products
 const getAllProducts = async (page) => {
   try {
     const { data } = await axios.get(
@@ -20,10 +19,10 @@ const getAllProducts = async (page) => {
 };
 
 const Home = () => {
-  const [auth, setAuth] = useAuth();
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
 
   const banners = [
     "/images/Banner2.jpg",
@@ -35,12 +34,30 @@ const Home = () => {
     marginBottom: "50px",
   };
 
+  const productCarouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 5, // Display 5 products at a time
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const initialProducts = await getAllProducts(page);
+      const featured = initialProducts.slice(0, 5);
+      setFeaturedProducts(featured);
+      setProducts(initialProducts);
+    };
+
+    fetchProducts();
+  }, [page]);
+
   return (
     <Layout title={"Zetra"}>
       <div>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ZETRA</title>
         <div id="banner" className="banner-container" style={bannerStyles}>
           {banners.length > 0 ? (
             <Slider
@@ -63,7 +80,25 @@ const Home = () => {
 
         <div className="featured-products-container text-center">
           <h1 className="featured-products-heading">Featured Products</h1>
-          {/* Add your featured products here */}
+          <Slider {...productCarouselSettings}>
+            {products.map((product) => (
+              <Link key={product._id} to={`/product/${product.slug}`}>
+                <div className="card m-2" style={{ width: "18rem" }}>
+                  <img
+                    src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
+                    className="card-img-top"
+                    alt={product.name}
+                    style={{ width: "10rem", height: "10rem" }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{product.name}</h5>
+                    <p className="card-text">{product.description.substring(0, 60)}...</p>
+                    <p className="card-text"> ₹ {product.price}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </Slider>
         </div>
       </div>
     </Layout>
