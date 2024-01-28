@@ -1,4 +1,7 @@
 import express from "express";
+import multer from "multer";
+const upload = multer({ dest: 'uploads/' })
+
 import {
   testController,
   registerController,
@@ -10,6 +13,7 @@ import {
   orderStatusController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
+import { sellOrderController } from "../controllers/orderController.js";
 
 //router object
 const router = express.Router();
@@ -53,5 +57,8 @@ router.put(
   isAdmin,
   orderStatusController
 );
+
+//sell order
+router.post("/sell-order", requireSignIn, upload.single('photo'), sellOrderController );
 
 export default router;

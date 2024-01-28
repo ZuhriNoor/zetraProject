@@ -1,193 +1,143 @@
-/* .selling {
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+
+
+.selling {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
-.selling .div {
-    background-color: #ffffff;
-    height: 844px;
-    position: relative;
-    width: 390px;
+.sell-box-form {
+  background-color: #2a2c77;
+  color: white;
+  padding: 3%;
+  border-radius: 20px;
 }
 
-.selling .overlap-group {
-    background: linear-gradient(180deg, rgb(52.27, 55.48, 174.25) 0%, rgb(43, 45, 119) 100%);
-    border-radius: 13px;
-    height: 220px;
-    left: 22px;
-    position: absolute;
-    top: 186px;
-    width: 165px;
+.sell-input {
+  margin-top: 0.3rem;
+  margin-bottom: 1.3rem;
+  border-radius: 20px;
 }
 
-.selling .pngwing {
-    height: 143px;
-    left: 9px;
-    object-fit: cover;
-    position: absolute;
-    top: 39px;
-    width: 148px;
+.selling .sell-box-form input {
+  border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+  height: 15px;
 }
 
-.selling .overlap {
-    background: linear-gradient(180deg, rgb(53, 56, 174) 0%, rgb(44, 46, 122) 100%);
-    border-radius: 13px;
-    height: 220px;
-    left: 203px;
-    position: absolute;
-    top: 360px;
-    width: 165px;
+.selling textarea {
+  border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+  resize: none;
 }
 
-.selling .material-symbols {
-    height: 148px;
-    left: 21px;
-    position: absolute;
-    top: 36px;
-    width: 124px;
+@media only screen and (max-width: 600px) {
+  .selling .sell-box-form input,
+  .selling textarea {
+    width: 65vw; /* Adjust the size for smaller screens */
+  }
 }
 
-.selling .overlap-2 {
-   
-    background-size: 100% 100%;
-    height: 156px;
-    left: 23px;
-    position: absolute;
-    top: 424px;
-    width: 165px;
+.selling-condition {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 2rem;
 }
 
-.selling .rectangle {
-    height: 156px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 165px;
+.selling-condition label {
+  font-weight: 600;
 }
 
-.selling .img {
-    height: 129px;
-    left: 19px;
-    position: absolute;
-    top: 13px;
-    width: 128px;
+.selling-second-box {
+  display: flex;
+  flex-direction: row;
 }
 
-.selling .pngwing-wrapper {
-    background: linear-gradient(180deg, rgb(53, 56, 174) 0%, rgb(44, 46, 121) 100%);
-    border-radius: 13px;
-    height: 156px;
-    left: 203px;
-    position: absolute;
-    top: 186px;
-    width: 165px;
+.selling-upload {
+  background-color: #2a2c77;
+  margin: 2rem 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.selling-upload:hover{
+  background-color: black;
 }
 
-.selling .pngwing-2 {
-    height: 126px;
-    left: 20px;
-    object-fit: cover;
-    position: absolute;
-    top: 15px;
-    width: 126px;
+.selling-cam-icon{
+  height: 60px;
+  width: 60px;
 }
 
-.selling .div-wrapper {
+
+
+.selling-radio {
+  color: #2a2c77;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: normal;
+  margin: 0.3rem;
+}
+
+
+
+.selling-btn{
+    width: 40vw;
+    height: 3rem;
+    border-radius: 25px;
     background-color: #2a2c77;
-    border-radius: 27px;
-    height: 44px;
-    left: 107px;
-    position: absolute;
-    top: 656px;
-    width: 176px;
-}
-
-.selling .text-wrapper {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 16px;
+    color: white;
     font-weight: 600;
-    left: 24px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 10px;
-    white-space: nowrap;
-    width: 128px;
+    margin: 0.4rem auto 3rem auto;
+
 }
 
-.selling .overlap-3 {
-    background-color: #555555;
-    border-radius: 27px;
-    height: 44px;
-    left: 107px;
-    position: absolute;
-    top: 718px;
-    width: 176px;
+/* Update the existing styles to visually represent checkboxes as radio buttons */
+
+/* Hide the default checkboxes */
+.selling input[type="checkbox"] {
+  display: none;
 }
 
-.selling .text-wrapper-2 {
-    color: #000000;
-    font-family: "Inter-SemiBold", Helvetica;
-    font-size: 20px;
-    font-weight: 600;
-    height: 24px;
-    left: 98px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 117px;
-    white-space: nowrap;
+/* Styling for the custom radio buttons */
+.selling .ellipse,
+.selling .ellipse-2 {
+  border-radius: 50%; /* Makes the div appear as a circle */
+  height: 19px;
+  width: 19px;
+  display: inline-block;
+  margin-right: 8px; /* Spacing between the radio button and text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative; /* Needed for absolute positioning of the checkmark */
+  vertical-align: middle;
+  border: 1px solid #000; /* Border for the radio button */
 }
 
-.selling .overlap-4 {
-    height: 34px;
-    left: 35px;
-    position: absolute;
-    top: 46px;
-    width: 320px;
+/* Styling for the unchecked state of the radio button */
+.selling .ellipse::after,
+.selling .ellipse-2::after {
+  content: ""; /* Empty content */
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9px; /* Adjust the size of the inner circle */
+  height: 9px; /* Adjust the size of the inner circle */
+  border-radius: 50%; /* Make it a circle */
+  background-color: transparent; /* Background color for the inner circle */
 }
 
-.selling .ZECTRA {
-    color: transparent;
-    font-family: "Inria Sans-Bold", Helvetica;
-    font-size: 20px;
-    font-weight: 700;
-    height: 29px;
-    left: 71px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 179px;
+/* Styling for the checked state of the radio button */
+.selling .ellipse.checked::after,
+.selling .ellipse-2.checked::after {
+  background-color: #353faa; /* Change background color when checked */
 }
-
-.selling .span {
-    color: #2429ac;
-}
-
-.selling .text-wrapper-3 {
-    color: #000000;
-}
-
-.selling .text-wrapper-4 {
-    color: #ea4600;
-}
-
-.selling .text-wrapper-5 {
-    color: #db004f;
-}
-
-.selling .group {
-    height: 33px;
-    left: 0;
-    position: absolute;
-    top: 1px;
-    width: 320px;
-} */

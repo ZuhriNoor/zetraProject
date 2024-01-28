@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Sellform from "./pages/Sellform";
 import Productsold from "./pages/Products";
 import Home from "./pages/Home";
 import Login from "./pages/Auth/Login";
@@ -27,12 +26,9 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
-<<<<<<< HEAD
-import Selling from "./pages/Selling";
-=======
 import Repair from "./pages/Repair";
 import Upgrade from "./pages/Upgrade";
->>>>>>> ba6781c4e7d0aedd412103e40f47c3391e73e8e5
+import Selling from "./pages/Selling";
 
 export default function App() {
   return (

@@ -1,4 +1,13 @@
 /* Home.css */
+*, *::before,*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
 
 /* Styles for the banner container */
 .banner-container {
