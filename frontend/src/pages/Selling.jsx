@@ -1,41 +1,45 @@
-// import React from "react";
-// import "../styles/Selling.css";
+import React from "react";
+import Layout from "../components/Layout/Layout";
 
-//  const Selling = () => {
-//     return (
-//         <div className="selling">
-//             <div className="div">
-//                 <div className="overlap-group">
-//                     <img className="pngwing" alt="Pngwing" src="pngwing-1.png" />
-//                 </div>
-//                 <div className="overlap">
-//                     <img className="material-symbols" alt="Material symbols" src="material-symbols-devices-other.svg" />
-//                 </div>
-//                 <div className="overlap-2">
-//                     <img className="rectangle" alt="Rectangle" src="rectangle-8.svg" />
-                    
-//                 </div>
-//                 <div className="pngwing-wrapper">
-//                     <img className="pngwing-2" alt="Pngwing" src="pngwing-2.png" />
-//                 </div>
-//                 <div className="div-wrapper">
-//                     <div className="text-wrapper">Submit</div>
-//                 </div>
-//                 <div className="overlap-3">
-//                     <div className="text-wrapper">Donate</div>
-//                 </div>
-//                 <div className="text-wrapper-2">What you’re selling?</div>
-//                 <div className="overlap-4">
-//                     <p className="ZECTRA">
-//                         <span className="span">Z</span>
-//                         <span className="text-wrapper-3">EC</span>
-//                         <span className="text-wrapper-4">TR</span>
-//                         <span className="text-wrapper-5">A</span>
-//                     </p>
-//                     <img className="group" alt="Group" src="group-25.png" />
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// };
-// export default Selling ;
+const Selling = () => {
+  return (
+
+    <Layout title={"Sell something"}>
+
+    
+      <div className="sell-main">
+        <div className="sell-box-form">
+          <div className="sell-input">
+            <label htmlFor="brand">Brand</label>
+            <input type="text" id="brand" placeholder="Enter Brand" />
+          </div>
+          <div className="sell-input">
+            <label htmlFor="model">Model</label>
+            <input type="text" id="model" placeholder="Enter Model" />
+          </div>
+          <div className="sell-input">
+            <label htmlFor="spec">Specification</label>
+            <input type="text" id="spec" placeholder="Enter Specification" />
+          </div>
+          <div className="sell-input">
+            <label htmlFor="desc">Description</label>
+            <textarea type="text" id="desc" placeholder="Enter Description" />
+          </div>
+        </div>
+        <div className="sell-cond">
+          <h6 htmlFor="condition">Condition: </h6>
+          <div className="sell-cond-radio">
+            <input type="radio" id="working" value={"working"} name="condition" />
+            <label htmlFor="working">Working</label>
+          </div>
+          <div className="sell-cond-radio">
+            <input type="radio" id="notworking" value={"notworking"} name="condition" />
+            <label htmlFor="notworking">Not working</label>
+          </div>
+        </div>
+      </div>
+</Layout>
+  );
+};
+
+export default Selling;

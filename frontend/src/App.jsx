@@ -27,6 +27,7 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
+import Selling from "./pages/Selling";
 
 export default function App() {
   return (
@@ -53,7 +54,7 @@ export default function App() {
           <Route path="admin/orders" element={<AdminOrders />} />
         </Route>
         <Route path="/productsold" element={<Productsold />} />
-        <Route path="/sell" element={<Sellform />} />
+        <Route path="/sell" element={<Selling />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
