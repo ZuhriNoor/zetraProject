@@ -27,7 +27,12 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
+<<<<<<< HEAD
 import Selling from "./pages/Selling";
+=======
+import Repair from "./pages/Repair";
+import Upgrade from "./pages/Upgrade";
+>>>>>>> ba6781c4e7d0aedd412103e40f47c3391e73e8e5
 
 export default function App() {
   return (
@@ -59,6 +64,8 @@ export default function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/repair" element={<Repair />} />
+        <Route path="/services/upgrade" element={<Upgrade />} />
 
         <Route path="/help" element={<Help />} />
         <Route path="/faq" element={<FaqPage />} />
