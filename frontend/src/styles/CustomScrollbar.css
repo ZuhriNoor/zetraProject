@@ -1,0 +1,31 @@
+/* CustomScrollbar.css */
+
+/* Thin scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #888;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+  
+  /* Thin scrollbar for Firefox */
+  /* Note: Firefox doesn't support styling the scrollbar directly */
+  /* This style targets the scrollbar track */
+  /* For better compatibility, you can use browser-specific prefixes */
+  /* or consider using a third-party library like 'react-custom-scrollbars' */
+  /* for a consistent look across different browsers */
+  
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f0f0f0;
+  }
+  
+  html:hover {
+    scrollbar-color: #555 #f0f0f0;
+  }
+  

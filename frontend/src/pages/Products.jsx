@@ -6,6 +6,7 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 import toast from "react-hot-toast";
 import { useCart } from "../context/cart";
+
 const HomePage = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -52,7 +53,7 @@ const HomePage = () => {
     }
   };
 
-  //getTOtal COunt
+  //getTotalCount
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
@@ -69,6 +70,7 @@ const HomePage = () => {
     loadMore();
     // eslint-disable-next-line
   }, [page]);
+
   //load more
   const loadMore = async () => {
     try {
@@ -94,6 +96,7 @@ const HomePage = () => {
     }
     setChecked(all);
   };
+  
   useEffect(() => {
     if (!checked.length || !radio.length) {
       getAllProducts();
@@ -108,7 +111,7 @@ const HomePage = () => {
     // eslint-disable-next-line
   }, [checked, radio]);
 
-  //get filterd product
+  //get filtered product
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
@@ -123,6 +126,7 @@ const HomePage = () => {
       console.log(error);
     }
   };
+
   return (
     <Layout title={"All Products - Best offers "}>
       <div className="container-fluid row mt-3">
@@ -160,20 +164,18 @@ const HomePage = () => {
         </div>
         <div className="col-md-9">
           <h1 className="text-center">All Products</h1>
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap justify-content-center">
             {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }}>
+              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
-                  className="card-img-top"
+                  className="card-img-top mx-auto" // Apply mx-auto class for centering
                   alt={p.name}
                   style={{ width: "10rem", height: "10rem" }}
                 />
                 <div className="card-body">
                   <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">
-                    {p.description.substring(0, 60)}...
-                  </p>
+                  <p className="card-text">{p.description.substring(0, 60)}...</p>
                   <p className="card-text"> ₹ {p.price}</p>
                   <button
                     className="btn btn-primary ms-1"
@@ -185,10 +187,7 @@ const HomePage = () => {
                     className="btn btn-secondary ms-1"
                     onClick={() => {
                       setCart([...cart, p]);
-                      localStorage.setItem(
-                        "cart",
-                        JSON.stringify([...cart, p])
-                      );
+                      localStorage.setItem("cart", JSON.stringify([...cart, p]));
                       toast.success("Item Added to cart");
                     }}
                   >
@@ -197,19 +196,6 @@ const HomePage = () => {
                 </div>
               </div>
             ))}
-          </div>
-          <div className="m-2 p-3">
-            {products && products.length < total && (
-              <button
-                className="btn btn-warning"
-                onClick={(e) => {
-                  e.preventDefault();
-                  setPage(page + 1);
-                }}
-              >
-                {loading ? "Loading ..." : "Loadmore"}
-              </button>
-            )}
           </div>
         </div>
       </div>
