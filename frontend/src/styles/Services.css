@@ -1,155 +1,59 @@
-
 .services {
-  background-color: #ffffff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 100%;
+  height: 80vh; /* Set the height to 100% of the viewport height */
 }
 
-.services .div {
-  background-color: #ffffff;
-  height: 844px;
-  position: relative;
-  width: 390px;
+.category-buttons {
+  display: flex;
+  gap: 16px;
 }
 
-.services .vector {
-  height: 21px;
-  left: 36px;
-  position: absolute;
-  top: 56px;
-  width: 12px;
+.category-button {
+  margin-top: 4rem;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  height: 8rem;
+  width:5rem;
+  border-radius: 10px;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
 
-.services .solar-bag-outline {
-  height: 35px;
-  left: 319px;
-  position: absolute;
-  top: 50px;
-  width: 35px;
+.category-button:hover {
+  background-color: #2980b9;
 }
 
-.services .group {
-  background-color: #2a2c77;
-  border-radius: 13px;
-  height: 147px;
-  left: 212px;
-  position: absolute;
-  top: 253px;
-  width: 135px;
+.category-button.selected {
+  background-color: #2980b9;
 }
 
-.services.overlap-group {
-  background-size: 100% 100%;
-  height: 70px;
-  left: 22px;
-  position: relative;
-  top: 39px;
-  width: 91px;
+.book-now-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15rem; /* Add margin as needed */
+  
 }
 
-.services.game-icons-upgrade {
-  height: 36px;
-  left: 27px;
-  position: absolute;
-  top: 14px;
-  width: 38px;
-}
-
-.services .fluent-phone-laptop-wrapper {
-  background-color: #2a2c77;
-  border-radius: 13px;
-  height: 148px;
-  left: 38px;
-  position: absolute;
-  top: 251px;
-  width: 139px;
-}
-
-.services .fluent-phone-laptop {
-  height: 91px;
-  left: 27px;
-  position: absolute;
-  top: 28px;
-  width: 84px;
-}
-
-.services .text-wrapper {
-  color: #000000;
-  font-family: "Inter-ExtraBold", Helvetica;
-  font-size: 32px;
-  font-weight: 800;
-  left: 125px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  top: 144px;
-}
-
-.services .overlap {
-  background-color: #2a2c77;
-  border-radius: 17px;
-  height: 64px;
-  left: 49px;
-  position: absolute;
-  top: 497px;
-  width: 292px;
-}
-
-.services.text-wrapper-2 {
-  color: #ffffff;
-  font-family: "Inter-Bold", Helvetica;
-  font-size: 24px;
-  font-weight: 700;
-  left: 70px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 16px;
-  width: 153px;
-}
-
-.services .text-wrapper-3 {
-  color: #06084a;
-  font-family: "Inter-SemiBold", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  left: 31px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 408px;
-  width: 153px;
-}
-
-.services .text-wrapper-4 {
-  color: #06084a;
-  font-family: "Inter-SemiBold", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  left: 206px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 408px;
-  width: 153px;
-}
-
-.services .text-wrapper-5 {
-  color: #646464;
-  font-family: "Montserrat-SemiBold", Helvetica;
+.book-now-button {
+  width: 300px;
   font-size: 15px;
-  font-weight: 600;
-  height: 23px;
-  left: 93px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 627px;
-  width: 204px;
+  font-weight: 700;
+  background-color: #080b5a;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 27px;
+  transition: background-color 0.3s ease;
+}
+
+.book-now-button:hover {
+  background-color: #060849;
 }
