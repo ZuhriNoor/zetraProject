@@ -18,6 +18,7 @@ import UpdateProduct from "./pages/Admin/UpdateProduct";
 import Users from "./pages/Admin/Users";
 import Profile from "./pages/user/Profile";
 import Orders from "./pages/user/Orders";
+import SellOrders from "./pages/user/SellOrders";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
 import Products from "./pages/Admin/Products";
 import Search from "./pages/Search";
@@ -26,6 +27,7 @@ import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
 import CartPage from "./pages/CartPage";
 import AdminOrders from "./pages/Admin/AdminOrders";
+import AdminSellOrders from "./pages/Admin/AdminSellOrders"
 import Repair from "./pages/Repair";
 import Upgrade from "./pages/Upgrade";
 import Selling from "./pages/Selling";
@@ -43,6 +45,7 @@ export default function App() {
         <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />
           <Route path="user/orders" element={<Orders />} />
+          <Route path="user/sellorders" element={<SellOrders />} />
           <Route path="user/profile" element={<Profile />} />
         </Route>
         <Route path="/dashboard" element={<AdminRoute />}>
@@ -53,6 +56,7 @@ export default function App() {
           <Route path="admin/products" element={<Products />} />
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
+          <Route path="admin/sellorders" element={<AdminSellOrders />} />
         </Route>
         <Route path="/productsold" element={<Productsold />} />
         <Route path="/sell" element={<Selling />} />

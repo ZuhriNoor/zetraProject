@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 const UserMenu = () => {
   return (
     <div>
@@ -14,10 +14,19 @@ const UserMenu = () => {
           </NavLink>
           <NavLink
             to="/dashboard/user/orders"
-            className="list-group-item list-group-item-action"
+            className="dropdown-toggle list-group-item list-group-item-action"
+            data-bs-toggle="dropdown"
           >
             Orders
           </NavLink>
+          <ul className="dropdown-menu">
+            <li>
+              <Link className="dropdown-item" to="/dashboard/user/orders">Purchase Orders</Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/dashboard/user/sellorders">Sell Orders</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

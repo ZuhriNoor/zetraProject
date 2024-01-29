@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+
 const AdminMenu = () => {
   return (
     <>
@@ -26,10 +27,19 @@ const AdminMenu = () => {
           </NavLink>
           <NavLink
             to="/dashboard/admin/orders"
-            className="list-group-item list-group-item-action"
+            className="dropdown-toggle list-group-item list-group-item-action"
+            data-bs-toggle="dropdown"
           >
             Orders
           </NavLink>
+          <ul className="dropdown-menu">
+            <li>
+              <Link className="dropdown-item" to="/dashboard/admin/orders">Purchase Orders</Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/dashboard/admin/sellorders">Sell Orders</Link>
+            </li>
+          </ul>
           <NavLink
             to="/dashboard/admin/users"
             className="list-group-item list-group-item-action"

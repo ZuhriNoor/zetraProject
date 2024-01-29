@@ -13,7 +13,7 @@ import {
   orderStatusController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
-import { sellOrderController } from "../controllers/orderController.js";
+import { getAllSellOrdersController, getSellOrdersController, sellOrderController, sellOrderStatusController } from "../controllers/orderController.js";
 
 //router object
 const router = express.Router();
@@ -47,8 +47,14 @@ router.put("/profile", requireSignIn, updateProfileController);
 //orders
 router.get("/orders", requireSignIn, getOrdersController);
 
+//sell orders
+router.get("/sellorders", requireSignIn, getSellOrdersController);
+
 //all orders
 router.get("/all-orders", requireSignIn, isAdmin, getAllOrdersController);
+
+//all sell orders
+router.get("/all-sell-orders", requireSignIn, isAdmin, getAllSellOrdersController);
 
 // order status update
 router.put(
@@ -56,6 +62,14 @@ router.put(
   requireSignIn,
   isAdmin,
   orderStatusController
+);
+
+//sell order status update
+router.put(
+  "/sell-order-status/:orderId",
+  requireSignIn,
+  isAdmin,
+  sellOrderStatusController
 );
 
 //sell order
