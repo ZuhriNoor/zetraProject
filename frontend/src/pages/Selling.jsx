@@ -60,6 +60,7 @@ const Selling = () => {
   return (
     <Layout title={"Sell something"}>
       <div className="selling">
+      <h1 className="selling-title">Sell Something</h1>
         <div className="sell-box-form">
           <label htmlFor="brand">Brand:</label>
           <div className="sell-input">
@@ -127,14 +128,14 @@ const Selling = () => {
                 {isWorking && <div className="checked-mark" />}{" "}
                 {/* Custom checked mark */}
               </div>
-              Working
+              <span className="selling-radio-text">Working</span>
             </div>
             <div className="selling-radio" onClick={handleNotWorkingChange}>
               <div className={`ellipse-2 ${isNotWorking ? "checked" : ""}`}>
                 {isNotWorking && <div className="checked-mark" />}{" "}
                 {/* Custom checked mark */}
               </div>
-              Not Working
+              <span className="selling-radio-text">Not Working</span>
             </div>
           </div>
           <div className="">

@@ -15,6 +15,11 @@
   border: none;
 }
 
+.products-btn:hover{
+  background-color:#21415e ;
+}
+
+
 
 @media only screen and (max-width: 700px) {
   .product-filter-box{
@@ -55,7 +60,7 @@
 }
 
 .products-btn-1:hover{
-  background-color: #737373;
+  background-color: #404040;
   border: 2px solid white;
 }
 
@@ -68,7 +73,7 @@
   border: 2px solid white;
 }
 .products-btn-2:hover{
-  background-color: #e8894f;
+  background-color: #c75f1f;
   border: 2px solid white;
 }
 

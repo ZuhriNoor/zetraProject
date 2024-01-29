@@ -3,14 +3,15 @@
 .selling {
   display: flex;
   flex-direction: column;
+  margin-top: 2rem;
   align-items: center;
-  margin-top: 10%;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  margin: 2rem 0.9rem;
 }
 
 .sell-box-form {
-  background-color: #2a2c77;
+  background-color: #2b547b;
   color: white;
   padding: 3%;
   border-radius: 20px;
@@ -41,6 +42,7 @@
   .selling textarea {
     width: 65vw; /* Adjust the size for smaller screens */
   }
+
 }
 
 .selling-condition {
@@ -59,7 +61,7 @@
 }
 
 .selling-upload {
-  background-color: #2a2c77;
+  background-color: #2b547b;
   margin: 2rem 2rem;
   color: white;
   display: flex;
@@ -67,7 +69,8 @@
   align-items: center;
 }
 .selling-upload:hover{
-  background-color: black;
+  background-color: #21415e;
+  color: white;
 }
 
 .selling-cam-icon{
@@ -75,7 +78,35 @@
   width: 60px;
 }
 
+.selling-title{
+  font-size: 2.5em;
+  margin: 1rem 0;
+}
 
+@media only screen and (max-width: 500px) {
+
+  .selling-title{
+    font-size: 1.7em;
+  }
+  .sell-box-form{
+    font-size: 0.8em;
+  }
+  .selling-second-box{
+    font-size: 1em;
+  }
+  .selling-radio-text{
+    font-size: 0.8em;
+  }
+  .sell-box-form{
+    padding: 1rem;
+  }
+  .selling-btn{
+    font-size: 0.9em;
+  }
+  .selling-upload{
+    font-size: 0.9em;
+  }
+}
 
 .selling-radio {
   color: #2a2c77;
@@ -87,17 +118,24 @@
   margin: 0.3rem;
 }
 
+.selling-radio-text{
+  font-size: 1em;
+}
+
 
 
 .selling-btn{
     width: 40vw;
     height: 3rem;
     border-radius: 25px;
-    background-color: #2a2c77;
+    background-color: #de6f2c;
     color: white;
     font-weight: 600;
     margin: 0.4rem auto 3rem auto;
+}
 
+.selling-btn:hover{
+  background-color: #c75f1f;
 }
 
 /* Update the existing styles to visually represent checkboxes as radio buttons */
