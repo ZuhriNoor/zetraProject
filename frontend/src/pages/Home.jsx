@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Layout from "../components/Layout/Layout";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import "../styles/Home.css"
 
 const getAllProducts = async (page) => {
   try {
@@ -21,9 +22,10 @@ const getAllProducts = async (page) => {
 };
 
 const Home = () => {
+// eslint-disable-next-line
   const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
+  // eslint-disable-next-line
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
   const banners = [
@@ -44,6 +46,40 @@ const Home = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },{
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        }
+      ]
   };
 
   useEffect(() => {
@@ -72,6 +108,7 @@ const Home = () => {
               autoplaySpeed={3000}
             >
               {banners.map((banner, index) => (
+                // eslint-disable-next-line
                 <img key={index} src={banner} alt={`Banner Image ${index + 1}`} />
               ))}
             </Slider>
@@ -89,17 +126,16 @@ const Home = () => {
                 to={`/product/${product.slug}`}
                 className="text-decoration-none"
               >
-                <div className="card m-2" style={{ width: "18rem", height:"20rem", margin: "0 10px" }}>
+                <div className="card m-2 home-card">
                   <img
                     src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${product._id}`}
-                    className="card-img-top mx-auto" // Apply mx-auto class for centering
+                    className="card-img-top mx-auto home-card-img" // Apply mx-auto class for centering
                     alt={product.name}
-                    style={{ width: "10rem", height: "10rem" }}
                   />
-                  <div className="card-body" style={{ width: "15rem", height:"5rem" }}>
-                    <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.description.substring(0, 30)}...</p>
-                    <p className="card-text"> ₹ {product.price}</p>
+                  <div className="card-body home-card-body">
+                    <h5 className="card-title home-card-title">{product.name}</h5>
+                    <p className="card-text home-card-text">{product.description.substring(0, 30)}...</p>
+                    <p className="card-text home-card-text"> ₹ {product.price}</p>
                   </div>
                 </div>
               </Link>

@@ -6,6 +6,7 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 import toast from "react-hot-toast";
 import { useCart } from "../context/cart";
+import "../styles/Products.css"
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -14,8 +15,11 @@ const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
+  // eslint-disable-next-line
   const [total, setTotal] = useState(0);
+  // eslint-disable-next-line
   const [page, setPage] = useState(1);
+  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
 
   //get all cat
@@ -130,8 +134,8 @@ const HomePage = () => {
   return (
     <Layout title={"All Products - Best offers "}>
       <div className="container-fluid row mt-3">
-        <div className="col-md-2">
-          <h4 className="text-center">Filter By Category</h4>
+        <div className="col-md-2 product-filter-box">
+          <h4 className="text-center products-filter-title">Filter By Category</h4>
           <div className="d-flex flex-column">
             {categories?.map((c) => (
               <Checkbox
@@ -143,7 +147,7 @@ const HomePage = () => {
             ))}
           </div>
           {/* price filter */}
-          <h4 className="text-center mt-4">Filter By Price</h4>
+          <h4 className="text-center mt-4 products-filter-title">Filter By Price</h4>
           <div className="d-flex flex-column">
             <Radio.Group onChange={(e) => setRadio(e.target.value)}>
               {Prices?.map((p) => (
@@ -155,36 +159,37 @@ const HomePage = () => {
           </div>
           <div className="d-flex flex-column">
             <button
-              className="btn btn-danger"
+              className="btn btn-danger products-btn"
               onClick={() => window.location.reload()}
             >
               RESET FILTERS
             </button>
           </div>
         </div>
-        <div className="col-md-9">
-          <h1 className="text-center">All Products</h1>
+        <hr className="products-line"/>
+        <div className="col-md-9 products-list">
+          <h1 className="text-center products-title">All Products</h1>
           <div className="d-flex flex-wrap justify-content-center">
             {products?.map((p) => (
-              <div className="card m-2" style={{ width: "18rem" }} key={p._id}>
+              <div className="card m-2 products-card" key={p._id}>
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top mx-auto" // Apply mx-auto class for centering
                   alt={p.name}
                   style={{ width: "10rem", height: "10rem" }}
                 />
-                <div className="card-body">
+                <div className="card-body products-card-body">
                   <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">{p.description.substring(0, 60)}...</p>
+                  <p className="card-text">{p.description.substring(0, 50)}...</p>
                   <p className="card-text"> ₹ {p.price}</p>
                   <button
-                    className="btn btn-primary ms-1"
+                    className="btn btn-primary ms-1 products-btn-1"
                     onClick={() => navigate(`/product/${p.slug}`)}
                   >
                     More Details
                   </button>
                   <button
-                    className="btn btn-secondary ms-1"
+                    className="btn btn-secondary ms-1 products-btn-2"
                     onClick={() => {
                       setCart([...cart, p]);
                       localStorage.setItem("cart", JSON.stringify([...cart, p]));

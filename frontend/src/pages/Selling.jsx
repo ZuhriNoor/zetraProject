@@ -44,7 +44,7 @@ const Selling = () => {
       );
       if (data?.success) {
         toast.error(data?.message);
-        navigate("/dashboard/user/orders");
+        navigate("/dashboard/user/sellorders");
       } else {
         toast.success("Error in creating sell order");
         
