@@ -128,8 +128,9 @@
     height: 49px;
     left: 26px;
     position: absolute;
-    top: 542px;
+    top: 550px;
     width: 334px;
+    
 }
 
 .Login .div-wrapper input::placeholder {
@@ -139,6 +140,7 @@
     font-weight: 300;
     letter-spacing: 0;
     line-height: 17.5px;
+    
   }
 
 .Login .rectangle {
@@ -334,9 +336,11 @@
     background-color: #dadada; 
     border: none; 
     border-radius: 27px; 
-    height: 46px; 
-    width: 334px;     
-    font-size: 17px;
+    
+    width: 240px;     
+    font-size: 24px;
+    margin: 0px;
+    padding: 5px;
   }
   
 
@@ -357,9 +361,11 @@
     background-color: #dadada; 
     border: none; 
     border-radius: 27px; 
-    height: 46px; 
-    width: 334px;     
-    font-size: 17px;
+    
+    width: 240px;     
+    font-size: 24px;
+    margin: 0px;
+    padding: 5px;
   }
 
 .Login.rectangle {
@@ -414,9 +420,11 @@
     left: 187px;
     letter-spacing: 0;
     line-height: 18.5px;
-    position: absolute;
+    position:absolute;
     top: 614px;
     width: 173px;
+    
+    
 }
 
 .Login.don-t-have-an {

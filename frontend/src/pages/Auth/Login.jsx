@@ -88,8 +88,7 @@ export default function Login() {
               required
             />
           </div>
-          <img className="rectangle" alt="Rectangle" src="rectangle-19.svg" />
-          <img className="img" alt="Rectangle" src="rectangle-26.svg" />
+          
           <div className="group">
             <div className="text-wrapper-5">
               <button
@@ -112,7 +111,7 @@ export default function Login() {
           </p>
           <p className="ZECTRA">
             <span className="text-wrapper-8">Z</span>
-            <span className="text-wrapper-9">EC</span>
+            <span className="text-wrapper-9">E</span>
             <span className="text-wrapper-10">TR</span>
             <span className="text-wrapper-11">A</span>
           </p>

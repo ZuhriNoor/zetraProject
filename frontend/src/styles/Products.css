@@ -1,88 +1,86 @@
 @media only screen and (max-width: 500px) {
-  .products-btn{
+  .products-btn {
     width: 50vw;
     align-self: center;
   }
-  .products-list{
-    margin:0;
+  .products-list {
+    margin: 0;
     padding: 0;
   }
 }
 
-.products-btn{
+.products-btn {
   margin: 1rem;
-  background-color:#2b547b;
+  background-color: #2b547b;
   border: none;
+  cursor: pointer; /* Added cursor property */
 }
 
-.products-btn:hover{
-  background-color:#21415e ;
+.products-btn:hover {
+  background-color: #21415e;
 }
-
-
 
 @media only screen and (max-width: 700px) {
-  .product-filter-box{
+  .product-filter-box {
     display: flex;
     flex-direction: column;
   }
 }
 
-.products-filter-title{
+.products-filter-title {
   margin: 1rem auto;
-
 }
 
-.products-title{
+.products-title {
   margin: 2rem 0;
 }
 
-
-
-.products-card{
-  width: 16rem;
-  height: 28rem;
+.products-card {
+  width: 18rem;
+  height: 24rem;
   align-self: center;
   position: relative;
   padding: 1.5rem 0.2rem;
+  cursor: pointer; /* Added cursor property */
 }
 
-.products-card-body{
+.products-card-body {
   position: absolute;
   bottom: 0;
 }
 
-.products-btn-1{
-  background-color: #4f4f4f;
-  width: 8rem;
-  height: 1.3rem;
-  border: 2px solid white;
-}
-
-.products-btn-1:hover{
-  background-color: #404040;
-  border: 2px solid white;
-}
-
-
-.products-btn-2{
+.products-btn-1 {
   background-color: #de6f2c;
-  width: 9rem;
+  width: 6rem;
   height: 1.3rem;
-  margin-top: 0.5rem;
   border: 2px solid white;
+  cursor: pointer; /* Added cursor property */
 }
-.products-btn-2:hover{
+
+.products-btn-1:hover {
   background-color: #c75f1f;
   border: 2px solid white;
 }
 
-.products-line{
+.products-btn-2 {
+  background-color: #4f4f4f;
+  width: 6rem;
+  height: 1.3rem;
+  border: 2px solid white;
+  cursor: pointer; /* Added cursor property */
+}
+
+.products-btn-2:hover {
+  background-color: #404040;
+  border: 2px solid white;
+}
+
+.products-line {
   display: none;
 }
 
 @media only screen and (max-width: 700px) {
-  .products-line{
+  .products-line {
     display: block;
     border: 3px solid black;
     color: black;

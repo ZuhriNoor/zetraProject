@@ -34,7 +34,6 @@ const Header = () => {
         containerClassName=""
         containerStyle={{}}
         toastOptions={{
-          // Define default options
           className: "",
           duration: 4000,
         }}
@@ -42,6 +41,13 @@ const Header = () => {
 
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
+          <Link to="/" className="navbar-brand">
+            <img
+              src="/images/zetra-logo.png"
+              alt="ZETRA Logo"
+              style={{ maxHeight: "25px" }}
+            />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -54,61 +60,27 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand">
-              <img
-                src="/images/zetra-logo.png"
-                alt="ZETRA Logo"
-                style={{ maxHeight: "25px" }}
-              />
-            </Link>
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav ms-auto m-.1 mb-2 mb-lg-0">
               <SearchInput />
               <li className="nav-item">
-                <NavLink to="/" className="nav-link ">
+                <NavLink to="/" className="nav-link">
                   Home
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/sell" className="nav-link ">
+                <NavLink to="/sell" className="nav-link">
                   Sell
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/productsold" className="nav-link ">
+                <NavLink to="/productsold" className="nav-link">
                   Products
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/services" className="nav-link ">
+                <NavLink to="/services" className="nav-link">
                   Services
                 </NavLink>
-              </li>
-              <li className="nav-item dropdown">
-                <Link
-                  className="nav-link dropdown-toggle"
-                  to={"/categories"}
-                  data-bs-toggle="dropdown"
-                >
-                  Categories
-                </Link>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link className="dropdown-item" to={"/categories"}>
-                      All Categories
-                    </Link>
-                  </li>
-
-                  {categories?.map((c) => (
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to={`/category/${c.slug}`}
-                      >
-                        {c.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
               </li>
               {!auth?.user ? (
                 <>
@@ -117,7 +89,6 @@ const Header = () => {
                       Signup
                     </NavLink>
                   </li>
-
                   <li className="nav-item">
                     <NavLink to="/login" className="nav-link">
                       Login
@@ -160,18 +131,16 @@ const Header = () => {
                   </li>
                 </>
               )}
-
               <li className="nav-item">
-                <NavLink to="/help" className="nav-link ">
+                <NavLink to="/help" className="nav-link">
                   Help
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/faq" className="nav-link ">
+                <NavLink to="/faq" className="nav-link">
                   FAQ
                 </NavLink>
               </li>
-
               <li className="nav-item" style={{ position: "relative" }}>
                 <NavLink to="/cart" className="nav-link">
                   <img

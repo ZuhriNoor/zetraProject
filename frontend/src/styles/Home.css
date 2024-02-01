@@ -29,6 +29,7 @@
     width: 8rem;
     position: absolute;
     bottom: 0;
+    
   }
 
   .home-card-title {
@@ -46,9 +47,10 @@
 @media only screen and (min-width: 501px) {
   .home-card {
   
-    width: 18rem;
+    width: 19rem;
     height: 25rem;
     padding: 2rem 0.2rem;
+    
   }
 
   .home-card-img {
@@ -145,3 +147,35 @@
   color: #333;
   margin: 0;
 }
+
+
+
+
+
+/* Footer.css */
+
+.footer-container {
+   /* Set your desired background color */
+  color: white; /* Set text color for better visibility on the dark background */
+  padding: 25px; /* Add padding for better spacing */
+  display: flex;
+  justify-content: space-around; /* Adjust the alignment as needed */
+  align-items: flex-start; /* Adjust the alignment as needed */
+}
+
+.contact-details,
+.additional-info {
+  flex: 1;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+h2 {
+  font-size: 1.5rem; /* Set your desired font size for heading */
+}
+
+p {
+  font-size: 1rem; /* Set your desired font size for paragraphs */
+  margin: 0px 0; /* Add margin for better spacing between paragraphs */
+}
+
+/* Add more styles as needed */

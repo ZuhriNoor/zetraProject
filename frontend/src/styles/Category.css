@@ -1,0 +1,22 @@
+/* Category.css */
+.category-container {
+    display: flex;
+  }
+  
+  .category-item {
+    flex: 1;
+    margin: 15px;
+  }
+  
+  .category-link {
+    width: 100%;
+    background-color: #de6f2c; /* New button color (a shade of blue) */
+    color: #fff; /* Text color for better contrast */
+    border: none;
+  }
+
+  .category-link:hover{
+    background-color: #404040;
+    
+  }
+  

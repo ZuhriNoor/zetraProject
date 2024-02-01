@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Layout from "../components/Layout/Layout";
 import "../styles/Selling.css";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
 
 const Selling = () => {
   const navigate = useNavigate();
+  const [auth] = useAuth();
   const [isWorking, setIsWorking] = useState(false);
   const [isNotWorking, setIsNotWorking] = useState(false);
   const [brand, setBrand] = useState("");
@@ -169,9 +171,22 @@ const Selling = () => {
               </div>
             )}
           </div>
-        <button className="selling-btn" onClick={handleSubmit}>
-          Submit
-        </button>
+          {auth?.token ? (
+          <button className="selling-btn" onClick={handleSubmit}>
+            Submit
+          </button>
+        ) : (
+          <button
+            className="selling-btn"
+            onClick={() =>
+              navigate("/login", {
+                state: "/dashboard/user/sellorders",
+              })
+            }
+          >
+            Login to Sell
+          </button>
+        )}
       </div>
     </Layout>
   );

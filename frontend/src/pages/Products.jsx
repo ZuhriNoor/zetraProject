@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 import toast from "react-hot-toast";
 import { useCart } from "../context/cart";
-import "../styles/Products.css"
+import "../styles/Products.css";
+import { Collapse, Select, Radio } from "antd";
+
+const { Option } = Select;
+const { Panel } = Collapse;
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -15,14 +18,10 @@ const HomePage = () => {
   const [categories, setCategories] = useState([]);
   const [checked, setChecked] = useState([]);
   const [radio, setRadio] = useState([]);
-  // eslint-disable-next-line
   const [total, setTotal] = useState(0);
-  // eslint-disable-next-line
   const [page, setPage] = useState(1);
-  // eslint-disable-next-line
   const [loading, setLoading] = useState(false);
 
-  //get all cat
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get(
@@ -42,7 +41,6 @@ const HomePage = () => {
     // eslint-disable-next-line
   }, []);
 
-  //get products
   const getAllProducts = async () => {
     try {
       setLoading(true);
@@ -57,7 +55,6 @@ const HomePage = () => {
     }
   };
 
-  //getTotalCount
   const getTotal = async () => {
     try {
       const { data } = await axios.get(
@@ -75,7 +72,6 @@ const HomePage = () => {
     // eslint-disable-next-line
   }, [page]);
 
-  //load more
   const loadMore = async () => {
     try {
       setLoading(true);
@@ -90,7 +86,6 @@ const HomePage = () => {
     }
   };
 
-  // filter by cat
   const handleFilter = (value, id) => {
     let all = [...checked];
     if (value) {
@@ -100,7 +95,7 @@ const HomePage = () => {
     }
     setChecked(all);
   };
-  
+
   useEffect(() => {
     if (!checked.length || !radio.length) {
       getAllProducts();
@@ -115,7 +110,6 @@ const HomePage = () => {
     // eslint-disable-next-line
   }, [checked, radio]);
 
-  //get filtered product
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
@@ -131,32 +125,53 @@ const HomePage = () => {
     }
   };
 
+  const handleBuyNow = (product) => {
+    setCart([...cart, product]);
+    localStorage.setItem("cart", JSON.stringify([...cart, product]));
+    toast.success("Item Added to cart");
+    navigate("/cart");
+  };
+
   return (
     <Layout title={"All Products - Best offers "}>
       <div className="container-fluid row mt-3">
         <div className="col-md-2 product-filter-box">
-          <h4 className="text-center products-filter-title">Filter By Category</h4>
-          <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
-            ))}
+          <div className="d-flex flex-column m-2">
+          <Collapse accordion>
+            <Panel header="Filter By Category" key="1">
+              <div className="d-flex flex-column m-2">
+                <Select
+                  mode="multiple"
+                  placeholder="Select Categories"
+                  style={{ width: "100%" }}
+                  onChange={(values) => setChecked(values)}
+                >
+                  {categories?.map((c) => (
+                    <Option key={c._id} value={c._id}>
+                      {c.name}
+                    </Option>
+                  ))}
+                </Select>
+              </div>
+            </Panel>
+            </Collapse>
+            </div>
+            <div className="d-flex flex-column m-2">
+            <Collapse accordion>
+            <Panel header="Filter By Price" key="2">
+              <div className="d-flex flex-column m-2">
+                <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+                  {Prices?.map((p) => (
+                    <div key={p._id}>
+                      <Radio value={p.array}>{p.name}</Radio>
+                    </div>
+                  ))}
+                </Radio.Group>
+              </div>
+            </Panel>
+          </Collapse>
           </div>
-          {/* price filter */}
-          <h4 className="text-center mt-4 products-filter-title">Filter By Price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-              {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
-              ))}
-            </Radio.Group>
-          </div>
+
           <div className="d-flex flex-column">
             <button
               className="btn btn-danger products-btn"
@@ -171,10 +186,14 @@ const HomePage = () => {
           <h1 className="text-center products-title">All Products</h1>
           <div className="d-flex flex-wrap justify-content-center">
             {products?.map((p) => (
-              <div className="card m-2 products-card" key={p._id}>
+              <div
+                className="card m-2 products-card"
+                key={p._id}
+                onClick={() => navigate(`/product/${p.slug}`)}
+              >
                 <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
-                  className="card-img-top mx-auto" // Apply mx-auto class for centering
+                  className="card-img-top mx-auto"
                   alt={p.name}
                   style={{ width: "10rem", height: "10rem" }}
                 />
@@ -184,19 +203,23 @@ const HomePage = () => {
                   <p className="card-text"> ₹ {p.price}</p>
                   <button
                     className="btn btn-primary ms-1 products-btn-1"
-                    onClick={() => navigate(`/product/${p.slug}`)}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleBuyNow(p);
+                    }}
                   >
-                    More Details
+                    Buy Now
                   </button>
                   <button
                     className="btn btn-secondary ms-1 products-btn-2"
-                    onClick={() => {
+                    onClick={(e) => {
+                      e.stopPropagation();
                       setCart([...cart, p]);
                       localStorage.setItem("cart", JSON.stringify([...cart, p]));
                       toast.success("Item Added to cart");
                     }}
                   >
-                    ADD TO CART
+                    Add To Cart
                   </button>
                 </div>
               </div>
