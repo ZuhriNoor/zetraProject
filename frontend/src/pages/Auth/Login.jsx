@@ -110,10 +110,11 @@ export default function Login() {
             </span>
           </p>
           <p className="ZECTRA">
-            <span className="text-wrapper-8">Z</span>
-            <span className="text-wrapper-9">E</span>
-            <span className="text-wrapper-10">TR</span>
-            <span className="text-wrapper-11">A</span>
+          <img
+              src="/images/zetra-logo.png"
+              alt="ZETRA Logo"
+              style={{ maxHeight: "2.5rem" }}
+            />
           </p>
           
         </div>

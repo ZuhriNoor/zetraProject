@@ -1,0 +1,24 @@
+.user-menu .list-group {
+    display: flex;
+    flex-direction: row; /* Ensure the items are in a row */
+    justify-content: space-around; /* Adjust spacing between items */
+}
+
+.user-menu .list-group-item {
+    padding: 0.5rem 1rem;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    height: auto;
+    background-color: #de6f2c; /* Set background color to #de6f2c */
+    display: inline-block; /* Display items in a single row */
+}
+
+.user-menu .list-group-item.active {
+    border-color: #dee2e6 #dee2e6 #fff;
+    background-color: #404040; /* Set background color to #404040 for active item */
+    border-bottom-color: transparent;
+    color: #fff;
+}

@@ -1,35 +1,53 @@
-.register {
-    margin: 5px;
-    padding: 5px;
-  }
-  
-  .register form {
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .register .form-label {
-    font-weight: bold;
-  }
-  
-  .register .form-control {
-    margin-bottom: 5px;
-    border: 1px solid #2b547b; /* Added border */
-    height: 5px; /* Reduced height */
-    
-  }
-  
-  .register .form-check {
-    margin-bottom: 5px;
-  }
-  
-  .register .btn-primary {
-    background-color: #2b547b;
-    border: none;
-  }
-  
-  .register .btn-primary:hover {
-    background-color: #21415e;
-    cursor: pointer;
-  }
-  
+.register-form {
+  background-color: #4f4f4f;
+  color: white;
+  padding: 0;
+  border-radius: 20px;
+  width: 50%;
+  margin: 2rem;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"]
+{ /* Added specificity */
+  border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+}
+
+.register-form input[type="checkbox"],
+.register-form input[type="checkbox"]{
+  width: .1rem;
+  height: .1rem;
+}
+
+.form-check-label{
+  margin: 5px;
+  padding: 3px;
+}
+.register-form textarea {
+  border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+  resize: none;
+}
+
+.help-btn {
+  position: relative;
+  width: 20vw;
+  height: 3rem;
+  border-radius: 25px;
+  background-color: #de6f2c;
+  color: white;
+  font-weight: 600;
+  margin: 0.4rem auto 0.4rem auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.help-btn:hover {
+  background-color: #c75f1f;
+}
+
+

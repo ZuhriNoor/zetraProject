@@ -1,54 +1,66 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import "../../styles/AdminMenu.css";
 
 const AdminMenu = () => {
   return (
-    <>
-      <div className="text-center">
-        <div className="list-group">
-          <h4>Admin Panel</h4>
-          <NavLink
-            to="/dashboard/admin/create-category"
-            className="list-group-item list-group-item-action"
-          >
-            Create Category
-          </NavLink>
-          <NavLink
-            to="/dashboard/admin/create-product"
-            className="list-group-item list-group-item-action"
-          >
-            Create Product
-          </NavLink>
-          <NavLink
-            to="/dashboard/admin/products"
-            className="list-group-item list-group-item-action"
-          >
+    <div className="adminmenu">
+    <div className="text m-3">
+      <h1 className="me-md-auto">Admin Panel</h1>
+      <div className="list-group d-flex flex-row">
+        
+        <NavLink
+          to="/dashboard/admin/create-category"
+          className="nav-link"
+          activeClassName="active"
+        >
+          Create Category
+        </NavLink>
+        <NavLink
+          to="/dashboard/admin/create-product"
+          className="nav-link"
+          activeClassName="active"
+        >
+          Create Product
+        </NavLink>
+        <NavLink
+          to="/dashboard/admin/products"
+          className="nav-link"
+          activeClassName="active"
+        >
           Products
-          </NavLink>
+        </NavLink>
+        <div className="dropdown">
           <NavLink
             to="/dashboard/admin/orders"
-            className="dropdown-toggle list-group-item list-group-item-action"
+            className="nav-link dropdown-toggle"
             data-bs-toggle="dropdown"
           >
             Orders
           </NavLink>
           <ul className="dropdown-menu">
             <li>
-              <Link className="dropdown-item" to="/dashboard/admin/orders">Purchase Orders</Link>
+              <Link className="dropdown-item" to="/dashboard/admin/orders">
+                Purchase Orders
+              </Link>
             </li>
             <li>
-              <Link className="dropdown-item" to="/dashboard/admin/sellorders">Sell Orders</Link>
+              <Link className="dropdown-item" to="/dashboard/admin/sellorders">
+                Sell Orders
+              </Link>
             </li>
           </ul>
-          <NavLink
-            to="/dashboard/admin/users"
-            className="list-group-item list-group-item-action"
-          >
-            Users
-          </NavLink>
         </div>
+        <NavLink
+          to="/dashboard/admin/users"
+          className="nav-link"
+          activeClassName="active"
+        >
+          Users
+        </NavLink>
       </div>
-    </>
+    </div>
+    </div>
   );
 };
 

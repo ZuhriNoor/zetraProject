@@ -1,14 +1,18 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
+import "../../styles/UserMenu.css"; // Import the CSS file for UserMenu
+
 const UserMenu = () => {
   return (
-    <div>
-      <div className="text-center">
+    <div className="user-menu">
+      <div className="text m-3">
+      <h4>Dashboard</h4>
         <div className="list-group">
-          <h4>Dashboard</h4>
+          
           <NavLink
             to="/dashboard/user/profile"
             className="list-group-item list-group-item-action"
+            activeClassName="active" 
           >
             Profile
           </NavLink>
@@ -16,6 +20,7 @@ const UserMenu = () => {
             to="/dashboard/user/orders"
             className="dropdown-toggle list-group-item list-group-item-action"
             data-bs-toggle="dropdown"
+            activeClassName="active"
           >
             Orders
           </NavLink>

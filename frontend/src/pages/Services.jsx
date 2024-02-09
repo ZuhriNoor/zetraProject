@@ -1,59 +1,37 @@
-// Services.js
-
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/Services.css";
+/* Services.jsx */
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Layout from "../components/Layout/Layout";
+import "../styles/Services.css";
 
-const Services = () => {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  const handleCategorySelection = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const handleBookNow = () => {
-    if (selectedCategory) {
-      // Redirect to the respective page based on the selected category
-      navigate(`/services/${selectedCategory.toLowerCase()}`);
-    } else {
-      // Display an alert or handle the case where no category is selected
-      alert("Please select a category before booking.");
-    }
-  };
-
+export default function Services() {
   return (
     <Layout title={"Zetra"}>
-      <div className="services">
-        {/* ... (existing JSX) */}
-
-        {/* Add category selection buttons (update as needed) */}
-        <div className="category-buttons">
-          <button
-            className={`category-button ${selectedCategory === "Repair" ? "selected" : ""}`}
-            onClick={() => handleCategorySelection("Repair")}
-          >
-            Repair
-          </button>
-          <button
-            className={`category-button ${selectedCategory === "Upgrade" ? "selected" : ""}`}
-            onClick={() => handleCategorySelection("Upgrade")}
-          >
-            Upgrade
-          </button>
-          {/* Add more buttons for other categories as needed */}
-        </div>
-
-        {/* "Book Now" button */}
-        <div className="book-now-container">
-          <button className="book-now-button" onClick={handleBookNow}>
-            Book Now
-          </button>
+      <h1 className="service-title">Choose your required service</h1>
+      <div className="services-page">
+        <div className="card-container">
+          {/* Use Link component instead of anchor tags */}
+          <Link to="/services/repair" className="card-link">
+            <div className="card">
+              <div className="wrapper">
+                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" className="cover-image" alt="Cover" />
+              </div>
+              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" className="title" alt="Title" />
+              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" className="character" alt="Character" />
+            </div>
+          </Link>
+          {/* Use Link component instead of anchor tags */}
+          <Link to="/services/upgrade" className="card-link">
+            <div className="card">
+              <div className="wrapper">
+                <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" className="cover-image" alt="Cover" />
+              </div>
+              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" className="title" alt="Title" />
+              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" className="character" alt="Character" />
+            </div>
+          </Link>
         </div>
       </div>
     </Layout>
   );
-};
-
-export default Services;
+}

@@ -1,186 +1,105 @@
 .help {
-    background-color: #f0f1f5;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  margin: .5rem 0.9rem;
+  }
+  
+  .help-content {
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: center;
-    width: 100%;
-}
+    margin-top: 2rem;
+  }
+  
+  .help-form {
+    background-color: #4f4f4f;
+  color: white;
+  padding: 3%;
+  border-radius: 20px;
+  }
+  
+  .help-input {
+    margin: .5rem;
+    margin-top: 0.3rem;
+  margin-bottom: 1.3rem;
+  border-radius: 20px;
+  }
+  
+  .help-form input{
+    border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+  height: 15px;
+  
+  }
 
-.help .div {
-    background-color: #f0f1f5;
-    height: 844px;
+  
+  .help-form textarea {
+    border-radius: 25px;
+  padding: 13px;
+  width: 45vw;
+  
+  }
+  
+
+  
+  .help-form textarea {
+    resize: none;
+  }
+  
+  .help-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+  }
+  
+  .help-logo {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  
+  .help-or-chat {
+    font-size: 1.2em;
+  }
+  
+  .help-btn {
     position: relative;
-    width: 394px;
-}
-
-.help .overlap-group {
-    background-color: #2a2c77;
-    border-radius: 20px;
-    height: 393px;
-    left: 33px;
-    position: absolute;
-    top: 318px;
-    width: 329px;
-}
-
-.help .rectangle {
-    background-color: #f1f2f3;
-    border-radius: 9px;
-    height: 41px;
-    left: 20px;
-    position: absolute;
-    top: 36px;
-    width: 290px;
-}
-
-.help .rectangle-2 {
-    background-color: #f1f2f3;
-    border-radius: 9px;
-    height: 41px;
-    left: 20px;
-    position: absolute;
-    top: 113px;
-    width: 290px;
-}
-
-.help .rectangle-3 {
-    background-color: #f1f2f3;
-    border-radius: 9px;
-    height: 40px;
-    left: 20px;
-    position: absolute;
-    top: 188px;
-    width: 290px;
-}
-
-.help .rectangle-4 {
-    background-color: #f1f2f3;
-    border-radius: 9px;
-    height: 109px;
-    left: 20px;
-    position: absolute;
-    top: 264px;
-    width: 290px;
-}
-
-.help .text-wrapper {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
+    width: 20vw;
+    height: 3rem;
+    border-radius: 25px;
+    background-color: #de6f2c;
+    color: white;
     font-weight: 600;
-    left: 26px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 10px;
-    width: 82px;
-}
+    margin: 0.4rem auto 0.4rem auto;
+    left: 50%;
+   
+   transform: translateX(-50%); /* Adjust for center alignment */
+    
+  }
 
-.help .text-wrapper-2 {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    left: 26px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 89px;
-    width: 82px;
-}
-
-.help .text-wrapper-3 {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    left: 26px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 164px;
-    width: 146px;
-}
-
-.help .text-wrapper-4 {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    left: 26px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    top: 240px;
-    width: 127px;
-}
-
-.help .iconoir-nav-arrow {
-    height: 39px;
-    left: 27px;
-    position: absolute;
-    top: 51px;
-    width: 40px;
-}
-
-.help .overlap {
-    background-color: #2a2c77;
-    border-radius: 50px/48.5px;
-    height: 97px;
-    left: 147px;
-    position: absolute;
-    top: 171px;
-    width: 100px;
-}
-
-.help .logo-here {
-    color: #ffffff;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    height: 23px;
-    left: 10px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
+  
+  .help-btn:hover {
+    background-color: #c75f1f;
+  }
+  
+  .help-or-chat-container {
+    margin-top: 2rem;
     text-align: center;
-    top: 36px;
-    width: 82px;
-}
-
-.help .or-you-can-chat-with {
-    color: transparent;
-    font-family: "Montserrat-SemiBold", Helvetica;
-    font-size: 15px;
-    font-weight: 600;
-    height: 23px;
-    left: 95px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 757px;
-    width: 204px;
-}
-
-.help .span {
-    color: #646464;
-}
-
-.help .text-wrapper-5 {
-    color: #2429ac;
-}
-
-.help .text-wrapper-6 {
-    color: #000000;
-    font-family: "Inter-ExtraBold", Helvetica;
-    font-size: 32px;
-    font-weight: 800;
-    height: 39px;
-    left: 161px;
-    letter-spacing: 0;
-    line-height: normal;
-    position: absolute;
-    text-align: center;
-    top: 89px;
-}
+  }
+  
+  .help-or-chat-text {
+    font-size: 1.2em;
+  }
+  
+  .help-or-chat-text span {
+    font-weight: bold;
+  }
+  

@@ -1,59 +1,156 @@
-.services {
+/* Services.css */
+
+.services-page {
+  width: 100vw;
+  height: 100vh;
+  margin: 0rem;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: center;
-  height: 80vh; /* Set the height to 100% of the viewport height */
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+
 }
 
-.category-buttons {
-  display: flex;
-  gap: 16px;
+.service-title {
+  text-align: center;
+  font-size: 2.5em;
+  margin: 1rem;
+  padding: 2rem ;
 }
 
-.category-button {
-  margin-top: 4rem;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  height: 8rem;
-  width:5rem;
-  border-radius: 10px;
-  outline: none;
-  transition: background-color 0.3s ease;
-}
-
-.category-button:hover {
-  background-color: #2980b9;
-}
-
-.category-button.selected {
-  background-color: #2980b9;
-}
-
-.book-now-container {
+.services-page .card-container {
   display: flex;
   justify-content: center;
-  margin-top: 15rem; /* Add margin as needed */
+  align-items: center;
+  margin: 5px;
+  padding: 2rem;
+  gap: 20px; /* Adjust the gap between cards */
   
 }
 
-.book-now-button {
-  width: 300px;
-  font-size: 15px;
-  font-weight: 700;
-  background-color: #080b5a;
-  color: #ffffff;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 27px;
-  transition: background-color 0.3s ease;
+.services-page .card {
+  width: 300px; /* Set a fixed width for the cards */
+  height: 400px; /* Set a fixed height for the cards */
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Ensure proper stacking */
+  justify-content: space-between; /* Adjust alignment */
+  padding: 0;
+  perspective: 2500px;
+  border: 0;
 }
 
-.book-now-button:hover {
-  background-color: #060849;
+.services-page .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.services-page .wrapper {
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.services-page .card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.services-page .wrapper::before,
+.services-page .wrapper::after {
+  content: "";
+  opacity: 0;
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
+  border-radius: 10px;
+}
+
+.services-page .wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.services-page .wrapper::after {
+  bottom: 0;
+  opacity: 1;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
+}
+
+.services-page .card:hover .wrapper::before,
+.services-page .wrapper::after {
+  opacity: 1;
+}
+
+.services-page .card:hover .wrapper::after {
+  height: 120px;
+}
+
+.services-page .title {
+  width: 100%;
+  transition: transform 0.5s;
+}
+
+.services-page .card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
+}
+
+.services-page .character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+  height: 4rem;
+}
+
+.services-page .card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
+.services-page .card .title {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom */
+  left: 50%; /* Move the image to the center horizontally */
+  margin-top: 10rem;
+  width: 50%;
+  height: 4rem;
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 600px) {
+  .services-page .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards horizontally */
+    margin: 2rem;
+    padding: 2rem;
+  }
+  .service-title {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 3rem;
+    padding: 2rem ;
+  }
 }

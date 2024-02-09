@@ -44,12 +44,14 @@ const AdminOrders = () => {
   };
   return (
     <Layout title={"All Orders Data"}>
-      <div className="row dashboard">
-        <div className="col-md-3">
+      <div className="list-group d-flex flex-row">
           <AdminMenu />
         </div>
-        <div className="col-md-8">
-          <h1 className="text-center">All Orders</h1>
+        <div className="container-fluid m-3 p-3">
+      <div className="row dashboard">
+        
+      <div className="col-md-8 m-2">
+            <h1>Purchase Orders</h1>
           {orders?.map((o, i) => {
             return (
               <div className="border shadow">
@@ -111,6 +113,7 @@ const AdminOrders = () => {
             );
           })}
         </div>
+      </div>
       </div>
     </Layout>
   );

@@ -25,12 +25,14 @@ const Products = () => {
   }, []);
   return (
     <Layout>
-      <div className="row">
-        <div className="col-md-3">
+      <div className="list-group d-flex flex-row">
           <AdminMenu />
         </div>
-        <div className="col-md-8 ">
-          <h1 className="text-center">All Products List</h1>
+        <div className="container-fluid m-3 p-3">
+      <div className="row">
+        
+      <div className="col-md-8 m-2">
+            <h1>All Products</h1>
           <div className="d-flex">
             {products?.map((p) => (
               <Link
@@ -54,6 +56,7 @@ const Products = () => {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </Layout>
   );

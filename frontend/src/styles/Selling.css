@@ -11,7 +11,7 @@
 }
 
 .sell-box-form {
-  background-color: #2b547b;
+  background-color: #4f4f4f;
   color: white;
   padding: 3%;
   border-radius: 20px;
@@ -61,7 +61,7 @@
 }
 
 .selling-upload {
-  background-color: #2b547b;
+  background-color: #4f4f4f;
   margin: 2rem 2rem;
   color: white;
   display: flex;
@@ -69,7 +69,7 @@
   align-items: center;
 }
 .selling-upload:hover{
-  background-color: #21415e;
+  background-color: #404040;
   color: white;
 }
 
@@ -109,7 +109,7 @@
 }
 
 .selling-radio {
-  color: #2a2c77;
+  color: #404040;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 500;
@@ -177,5 +177,5 @@
 /* Styling for the checked state of the radio button */
 .selling .ellipse.checked::after,
 .selling .ellipse-2.checked::after {
-  background-color: #353faa; /* Change background color when checked */
+  background-color: #404040; /* Change background color when checked */
 }
