@@ -50,6 +50,7 @@ const AdminMenu = () => {
               </Link>
             </li>
           </ul>
+          
         </div>
         <NavLink
           to="/dashboard/admin/users"
@@ -58,6 +59,13 @@ const AdminMenu = () => {
         >
           Users
         </NavLink>
+        <NavLink
+            to="/dashboard/admin/help"
+            className="nav-link"
+            activeClassName="active"
+          >
+            Help Requests
+          </NavLink>
       </div>
     </div>
     </div>

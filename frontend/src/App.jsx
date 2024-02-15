@@ -31,6 +31,7 @@ import AdminSellOrders from "./pages/Admin/AdminSellOrders"
 import Repair from "./pages/Repair";
 import Upgrade from "./pages/Upgrade";
 import Selling from "./pages/Selling";
+import HelpRequest from "./pages/Admin/HelpRequest";
 
 export default function App() {
   return (
@@ -57,6 +58,7 @@ export default function App() {
           <Route path="admin/users" element={<Users />} />
           <Route path="admin/orders" element={<AdminOrders />} />
           <Route path="admin/sellorders" element={<AdminSellOrders />} />
+          <Route path="admin/help" element={<HelpRequest />} />
         </Route>
         <Route path="/productsold" element={<Productsold />} />
         <Route path="/sell" element={<Selling />} />

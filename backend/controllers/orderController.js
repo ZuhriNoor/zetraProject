@@ -1,4 +1,5 @@
 import sellModel from "../models/sellModel.js";
+import helpModel from "../models/helpModel.js"
 import fs from "fs";
 
 // import multer from 'multer';
@@ -99,7 +100,6 @@ export const getAllSellOrdersController = async (req, res) => {
   }
 };
 
-
 //sell order status
 export const sellOrderStatusController = async (req, res) => {
   try {
@@ -120,3 +120,61 @@ export const sellOrderStatusController = async (req, res) => {
     });
   }
 };
+
+export const helpRequestController = async (req, res) => {
+  try {
+    const { name, email, phone, desc } = req.body;
+
+    //validation
+    switch (true) {
+      case !name:
+        return res.status(500).send({ error: "Name is Required" });
+      case !email:
+        return res.status(500).send({ error: "Email is Required" });
+      case !phone:
+        return res.status(500).send({ error: "Phone is Required" });
+      case !desc:
+        return res.status(500).send({ error: "Description is Required" });
+    }
+
+    const helpRequest = await new helpModel({
+      name,
+      email,
+      phone,
+      desc,
+    });
+
+    await helpRequest.save();
+
+    res.status(201).send({
+      success: true,
+      message: "Help request sent Successfully",
+      helpRequest,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error in sending help request",
+    });
+  }
+};
+
+export const getHelpRequestController = async(req, res) => {
+  try {
+    const helpRequest = await helpModel
+      .find({})
+      .populate("name", "email")
+      .populate("phone", "desc")
+      .sort({ createdAt: "-1" });
+    res.json(helpRequest);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error While Getting Sell Orders",
+      error,
+    });
+  }
+}

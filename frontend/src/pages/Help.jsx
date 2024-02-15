@@ -11,8 +11,8 @@ const Help = () => {
   const [auth] = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [description, setDescription] = useState("");
+  const [phone, setPhoneNumber] = useState("");
+  const [desc, setDescription] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,13 +20,12 @@ const Help = () => {
       const formData = {
         name,
         email,
-        phoneNumber,
-        description,
+        phone,
+        desc,
       };
 
-      // Make a POST request to your backend API to save the form data
       const response = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/help`, // Replace with your API endpoint
+        `${process.env.REACT_APP_API}/api/v1/auth/help`,
         formData
       );
 
@@ -78,7 +77,7 @@ const Help = () => {
                   type="tel"
                   id="phoneNumber"
                   name="phoneNumber"
-                  value={phoneNumber}
+                  value={phone}
                   onChange={(e) => setPhoneNumber(e.target.value)}
                   required
                 />
@@ -88,7 +87,7 @@ const Help = () => {
                 <textarea
                   id="description"
                   name="description"
-                  value={description}
+                  value={desc}
                   onChange={(e) => setDescription(e.target.value)}
                   required
                 />
