@@ -1,0 +1,57 @@
+/* CartPage.css */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .cart-container .txt h2 {
+      font-size: 1.5rem;
+      margin: 10px;
+    }
+  
+    .cart-container .txt h5 {
+      font-size: 1rem;
+      margin: 10px;
+    }
+  
+  
+    .cart-container .cart-summary {
+      margin-top: 20px !important;
+      margin-bottom: 5px !important;
+    }
+  
+    .cart-container .text-center {
+      padding: 10px !important;
+    }
+  
+    .cart-container .card-img-top {
+      margin: auto;
+      width: 10rem;
+      height: 10rem;
+    }
+  
+    .cart-container .card-body {
+      margin: 5px;
+      width: 10rem;
+      height: 10rem;
+    }
+  
+    .cart-container .btn {
+      font-size: 14px !important;
+      margin: 2px;
+      width: 4rem;
+    }
+  
+    .cart-container .card {
+      width: fit-content;
+      height: fit-content;
+    }
+
+
+
+
+
+
+
+    
+    
+  }
+  

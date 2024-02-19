@@ -19,8 +19,10 @@
   .help-form {
     background-color: #4f4f4f;
   color: white;
-  padding: 3%;
+  padding: 5px;
+  margin: 5px;
   border-radius: 20px;
+  width:fit-content;
   }
   
   .help-input {
@@ -33,7 +35,7 @@
   .help-form input{
     border-radius: 25px;
   padding: 13px;
-  width: 45vw;
+  width: 65vw;
   height: 15px;
   
   }
@@ -42,7 +44,7 @@
   .help-form textarea {
     border-radius: 25px;
   padding: 13px;
-  width: 45vw;
+  width: 65vw;
   
   }
   
@@ -72,13 +74,14 @@
   
   .help-btn {
     position: relative;
-    width: 20vw;
+    width:fit-content;
     height: 3rem;
     border-radius: 25px;
     background-color: #de6f2c;
     color: white;
     font-weight: 600;
     margin: 0.4rem auto 0.4rem auto;
+    padding: 2px;
     left: 50%;
    
    transform: translateX(-50%); /* Adjust for center alignment */

@@ -4,14 +4,14 @@ import "../../styles/UserMenu.css"; // Import the CSS file for UserMenu
 
 const UserMenu = () => {
   return (
-    <div className="user-menu">
-      <div className="text m-3">
+    <div className="user-menu m-3">
+      <div className="text">
       <h4>Dashboard</h4>
-        <div className="list-group">
+        <div className="list-group m-3" style={{ width: "10rem"}}>
           
           <NavLink
             to="/dashboard/user/profile"
-            className="list-group-item list-group-item-action"
+            className="list-group-item list-group-item-action" 
             activeClassName="active" 
           >
             Profile

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
+import { Helmet } from 'react-helmet';
 
 const Help = () => {
   const navigate = useNavigate();
@@ -45,6 +46,21 @@ const Help = () => {
   return (
     <Layout title={"Help"}>
       <div className="help">
+      <Helmet>
+        <script type="text/javascript">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/65d333e18d261e1b5f6247ea/1hn0g5b4j';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </script>
+      </Helmet>
         <h1 className="selling-title">Need Help?</h1>
         <div className="help-content">
           <div className="help-form">
@@ -112,8 +128,17 @@ const Help = () => {
           </div>
         </div>
         <div className="help-details">
-          <p className="help-or-chat">
-            <span>or you can chat with us!!!</span>
+        <p className="help-or-chat">
+            or you can{" "}
+            <a
+              href="https://tawk.to/chat/65d333e18d261e1b5f6247ea/1hn0g5b4j"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "orange", textDecoration: "none" }}
+            >
+              chat
+            </a>{" "}
+            with us!!!
           </p>
         </div>
       </div>

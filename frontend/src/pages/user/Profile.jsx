@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import { useAuth } from "../../context/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
+import "./Profile.css";
 
 const Profile = () => {
   //context
@@ -52,16 +53,16 @@ const Profile = () => {
   };
   return (
     <Layout title={"Your Profile"}>
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid dashboard">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-3 p-3">
             <UserMenu />
           </div>
-          <div className="col-md-9">
+          <div className="profile col-md-9">
             <div className="form-container ">
               <form onSubmit={handleSubmit}>
                 <h4 className="title">USER PROFILE</h4>
-                <div className="mb-3">
+                <div className="mb-3 ">
                   <input
                     type="text"
                     value={name}
@@ -70,6 +71,7 @@ const Profile = () => {
                     id="name"
                     placeholder="Enter Your Name"
                     autoFocus
+                    
                   />
                 </div>
                 <div className="mb-3">

@@ -1,10 +1,10 @@
 .register-form {
   background-color: #4f4f4f;
   color: white;
-  padding: 0;
+  padding: 5px;
+  margin: 5px;
   border-radius: 20px;
-  width: 50%;
-  margin: 2rem;
+  width: fit-content;
 }
 
 .register-form input[type="text"],
@@ -12,32 +12,31 @@
 .register-form input[type="password"]
 { /* Added specificity */
   border-radius: 25px;
-  padding: 13px;
-  width: 45vw;
+  padding: 5px;
+  width: 94vw;
+  height: 20px;
 }
 
 .register-form input[type="checkbox"],
 .register-form input[type="checkbox"]{
-  width: .1rem;
-  height: .1rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .form-check-label{
-  margin: 5px;
-  padding: 3px;
+  margin: 7px;
 }
 .register-form textarea {
   border-radius: 25px;
   padding: 13px;
-  width: 45vw;
-  resize: none;
+  width: 80vw;
 }
 
-.help-btn {
+.signup-btn {
   position: relative;
-  width: 20vw;
-  height: 3rem;
-  border-radius: 25px;
+  width:fit-content;
+  height:fit-content;
+  border-radius: 15px;
   background-color: #de6f2c;
   color: white;
   font-weight: 600;

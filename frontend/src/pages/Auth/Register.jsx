@@ -49,7 +49,7 @@ const Register = () => {
       <div className="help">
         <h1 className="selling-title">Register</h1>
         <div className="help-content">
-          <div className="help-form register-form">
+          <div className="register-form">
             <form className="row g-3" onSubmit={handleSubmit}>
               <div className="col-md-6">
                 <label htmlFor="email" className="form-label">
@@ -141,13 +141,13 @@ const Register = () => {
                     required
                   />
                   <label className="form-check-label" htmlFor="gridCheck">
-                    I agree to the Terms and Conditions
+                    I agree to the Terms</label><label>and Conditions
                   </label>
                 </div>
               </div>
               </div>
               <div className="col-12">
-                <button type="submit" className="help-btn btn btn-primary">
+                <button type="submit" className="signup-btn btn btn-primary">
                   Sign up
                 </button>
               </div>

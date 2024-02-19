@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import Categories from "./Categories";  // Import Categories component
 import "../styles/Home.css";
+import { Helmet } from 'react-helmet';
 
 const getAllProducts = async (page) => {
   try {
@@ -97,6 +98,22 @@ const Home = () => {
   return (
     <Layout title={"Zetra"}>
       <div>
+      <Helmet>
+        <script type="text/javascript">
+          {`
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+              s1.async=true;
+              s1.src='https://embed.tawk.to/65d333e18d261e1b5f6247ea/1hn0g5b4j';
+              s1.charset='UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </script>
+      </Helmet>
+      
         
 
         <div id="banner" className="banner-container" style={bannerStyles}>

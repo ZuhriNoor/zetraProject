@@ -1,0 +1,58 @@
+
+.profile .form-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  
+  
+  /* Form styles */
+  .profile .form-control {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  
+  .profile .btn-primary {
+    
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #2b547b;
+    border: none;
+    color: #fff;
+  }
+  
+  .profile .btn-primary:hover {
+    background-color: #21415e;
+  }
+  
+  /* Media queries for responsiveness */
+  @media (max-width: 768px) {
+    .profile .form-container {
+      padding: 10px;
+    }
+    .profile .title {
+
+        font-size:medium;
+      }
+    .profile .form-control {
+      width: 75%; /* Adjusting width to accommodate padding */
+    }
+  
+    .profile .btn-primary {
+    
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #2b547b;
+        border: none;
+        color: #fff;
+      }
+      .profile .btn-primary:hover {
+        background-color: #21415e;
+      }
+  }
+  
