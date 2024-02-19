@@ -71,6 +71,7 @@ const AdminSellOrders = () => {
                       <th scope="col">Specification</th>
                       <th scope="col">Description</th>
                       <th scope="col">Seller</th>
+                      <th scope="col">Donation</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -94,6 +95,8 @@ const AdminSellOrders = () => {
                       <td>{o?.spec}</td>
                       <td>{o?.desc}</td>
                       <td>{o?.seller?.name}</td>
+                      <td>{o?.donate}</td>
+                      
                     </tr>
                   </tbody>
                 </table>

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/auth";
 import toast from "react-hot-toast";
 import axios from "axios";
+import Checkbox from "antd/es/checkbox/Checkbox";
 
 const Selling = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const Selling = () => {
   const [desc, setDesc] = useState("");
   const [condition, setCondition] = useState("");
   const [photo, setPhoto] = useState("");
+  const [donate, setDonate] = useState(false);
 
   const handleWorkingChange = () => {
     setIsWorking(!isWorking);
@@ -40,7 +42,8 @@ const Selling = () => {
       orderData.append("desc", desc);
       orderData.append("photo", photo);
       orderData.append("condition", condition);
-      const {data} = await axios.post(
+      orderData.append("donate", donate);
+      const { data } = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/auth/sell-order`,
         orderData
       );
@@ -49,7 +52,6 @@ const Selling = () => {
         navigate("/dashboard/user/sellorders");
       } else {
         toast.success("Error in creating sell order");
-        
       }
     } catch (error) {
       console.log(error);
@@ -57,12 +59,10 @@ const Selling = () => {
     }
   };
 
-
-
   return (
     <Layout title={"Sell something"}>
       <div className="selling">
-      <h1 className="selling-title">Sell Something</h1>
+        <h1 className="selling-title">Sell Something</h1>
         <div className="sell-box-form">
           <label htmlFor="brand">Brand:</label>
           <div className="sell-input">
@@ -157,23 +157,32 @@ const Selling = () => {
               />
             </label>
           </div>
-          
         </div>
         <div className="">
-            {photo && (
-              <div className="text-center">
-                <img
-                  src={URL.createObjectURL(photo)}
-                  alt="product_photo"
-                  height={"200px"}
-                  className="img img-responsive"
-                />
-              </div>
-            )}
-          </div>
-          {auth?.token ? (
+          {photo && (
+            <div className="text-center">
+              <img
+                src={URL.createObjectURL(photo)}
+                alt="product_photo"
+                height={"200px"}
+                className="img img-responsive"
+              />
+            </div>
+          )}
+          <Checkbox
+            style={{
+              fontSize: "1.25rem",
+              margin: "10px 0",
+              fontFamily: "'Montserrat', sans-serif",
+            }}
+            onChange={(e) => {setDonate(e.target.checked)}}
+          >
+            I want to donate this
+          </Checkbox>
+        </div>
+        {auth?.token ? (
           <button className="selling-btn" onClick={handleSubmit}>
-            Submit
+            {donate ? "Donate" : "Submit order"}
           </button>
         ) : (
           <button

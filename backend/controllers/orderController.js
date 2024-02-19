@@ -1,6 +1,7 @@
 import sellModel from "../models/sellModel.js";
-import helpModel from "../models/helpModel.js"
+import helpModel from "../models/helpModel.js";
 import fs from "fs";
+import repairModel from "../models/repairModel.js";
 
 // import multer from 'multer';
 // const upload = multer({ dest: 'uploads/' });
@@ -8,7 +9,7 @@ import fs from "fs";
 //create sell order
 export const sellOrderController = async (req, res) => {
   try {
-    const { brand, model, spec, desc, condition } = req.body;
+    const { brand, model, spec, desc, condition, donate } = req.body;
     // const { photo } = req.files;
 
     //validation
@@ -35,6 +36,7 @@ export const sellOrderController = async (req, res) => {
       spec,
       desc,
       condition,
+      donate,
       seller: req.user._id,
     });
     // if (photo) {
@@ -67,6 +69,7 @@ export const getSellOrdersController = async (req, res) => {
       .populate("brand", "-photo")
       .populate("model", "spec")
       .populate("desc")
+      .populate("donate")
       .populate("seller", "name");
     res.json(orders);
   } catch (error) {
@@ -86,7 +89,8 @@ export const getAllSellOrdersController = async (req, res) => {
       .find({})
       .populate("brand", "-photo")
       .populate("model", "spec")
-      .populate("desc")
+      .populate("desc","donate")
+
       .populate("seller", "name")
       .sort({ createdAt: "-1" });
     res.json(sellOrders);
@@ -161,7 +165,7 @@ export const helpRequestController = async (req, res) => {
   }
 };
 
-export const getHelpRequestController = async(req, res) => {
+export const getHelpRequestController = async (req, res) => {
   try {
     const helpRequest = await helpModel
       .find({})
@@ -177,4 +181,42 @@ export const getHelpRequestController = async(req, res) => {
       error,
     });
   }
-}
+};
+
+export const repairRequestController = async (req, res) => {
+  try {
+    const { model, category, description, phone } = req.body;
+
+    //validation
+    switch (true) {
+      case !category:
+        return res.status(500).send({ error: "Name is Required" });
+        case !model:
+        return res.status(500).send({ error: "Model is Required" });
+      case !description:
+        return res.status(500).send({ error: "Email is Required" });
+    }
+
+    const repairRequest = await new repairModel({
+      model,
+      category,
+      description,
+      phone
+    });
+
+    await repairRequest.save();
+
+    res.status(201).send({
+      success: true,
+      message: "Repair request sent Successfully",
+      repairRequest,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error in sending repair request",
+    });
+  }
+};

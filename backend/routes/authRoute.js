@@ -13,7 +13,7 @@ import {
   orderStatusController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
-import { getAllSellOrdersController, getHelpRequestController, getSellOrdersController, helpRequestController, sellOrderController, sellOrderStatusController } from "../controllers/orderController.js";
+import { getAllSellOrdersController, getHelpRequestController, getSellOrdersController, helpRequestController, repairRequestController, sellOrderController, sellOrderStatusController } from "../controllers/orderController.js";
 
 //router object
 const router = express.Router();
@@ -79,6 +79,9 @@ router.post("/sell-order", requireSignIn, upload.single('photo'), sellOrderContr
 router.post("/help", helpRequestController);
 
 //get help requests
-router.get("/all-help",requireSignIn, isAdmin, getHelpRequestController)
+router.get("/all-help",requireSignIn, isAdmin, getHelpRequestController);
+
+//create repair request
+router.post("/create-repair-request", requireSignIn, repairRequestController);
 
 export default router;

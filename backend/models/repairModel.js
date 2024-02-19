@@ -1,12 +1,16 @@
 import mongoose from "mongoose";
 
-const helpSchema = new mongoose.Schema(
+const repairSchema = new mongoose.Schema(
   {
-    name: {
+    category: {
       type: String,
       required: true,
     },
-    email: {
+    model: {
+      type: String,
+      required: true,
+    },
+    description: {
       type: String,
       required: true,
     },
@@ -14,12 +18,8 @@ const helpSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    desc: {
-      type: String,
-      required: true,
-    },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("help", helpSchema);
+export default mongoose.model("repair", repairSchema);

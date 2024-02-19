@@ -34,6 +34,10 @@ const sellSchema = new mongoose.Schema(
       default: "Not Process",
       enum: ["Not Process", "Processing", "Picked up", "Order Complete", "Cancelled"],
     },
+    donate: {
+      type: Boolean,
+      default: false
+    }
   },
   { timestamps: true }
 );

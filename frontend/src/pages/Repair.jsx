@@ -3,47 +3,39 @@ import Layout from "../components/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { Select } from "antd";
+import { Input, Select } from "antd";
 const { Option } = Select;
 
 const Repair = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState("");
   const [description, setDescription] = useState("");
-  const [photo, setPhoto] = useState("");
+  const [model, setModel] = useState("");
+  const [phone, setPhone] = useState("");
 
-  // You can modify the category options based on your requirements
-  const categoryOptions = [
-    { value: "category1", label: "Category 1" },
-    { value: "category2", label: "Category 2" },
-    // Add more categories as needed
-  ];
+  var categories = ["Phone", "Tablet", "Laptop", "Computer", "Gaming Console"];
 
-  const handleRepairRequest = async () => {
+  const handleRepairRequest = async (e) => {
+    e.preventDefault();
     try {
-      // Add your logic to send repair request
-      // Use the selectedCategory, description, and photo in the request
-
-      // Example request using axios
-      const response = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/repair/create-repair-request`,
-        {
-          category: selectedCategory,
-          description,
-          photo,
-        }
+      const formData = {
+        category: selectedCategory,
+        model,
+        description,
+        phone,
+      };
+      const { data } = await axios.post(
+        `${process.env.REACT_APP_API}/api/v1/auth/create-repair-request`,
+        formData
       );
-
-      if (response.data.success) {
-        toast.success("Repair request submitted successfully!");
-        // You can redirect the user to a confirmation page or dashboard
-        navigate("/confirmation");
+      if (!data?.success) {
+        toast.error(data?.message);
       } else {
-        toast.error("Failed to submit repair request. Please try again.");
+        toast.success("Service Request Sent Successfully. A customer executive will contact you shortly.");
       }
     } catch (error) {
-      console.error("Error submitting repair request:", error);
-      toast.error("Something went wrong. Please try again later.");
+      console.log("Error submitting repair request:", error);
+      toast.error("Something went wrong");
     }
   };
 
@@ -51,49 +43,43 @@ const Repair = () => {
     <Layout title={"Zetra - Repair"}>
       <div className="container">
         <h1>Product Repair Request</h1>
+        <label>Category: </label>
         <Select
           placeholder="Select a category"
-          value={selectedCategory}
           onChange={(value) => setSelectedCategory(value)}
           style={{ width: "100%", marginBottom: "16px" }}
+          required
         >
-          {categoryOptions.map((option) => (
-            <Option key={option.value} value={option.value}>
-              {option.label}
+          {categories.map((option, id) => (
+            <Option key={id} value={option}>
+              {option}
             </Option>
           ))}
         </Select>
+
+        <label>Model: </label>
+        <Input
+          type="text"
+          placeholder="Enter Model"
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+          required
+        />
         <div className="mb-3">
-          <textarea
+          <label>Description: </label>
+          <Input
             value={description}
             placeholder="Describe the issue"
-            className="form-control"
             onChange={(e) => setDescription(e.target.value)}
           />
-        </div>
-        <div className="mb-3">
-          <label className="btn btn-outline-secondary col-md-12">
-            {photo ? photo.name : "Upload Photo"}
-            <input
-              type="file"
-              name="photo"
-              accept="image/*"
-              onChange={(e) => setPhoto(e.target.files[0])}
-              hidden
-            />
-          </label>
-        </div>
-        <div className="mb-3">
-          {photo && (
-            <div className="text-center">
-              <img
-                src={URL.createObjectURL(photo)}
-                alt="repair_photo"
-                height={"200px"}
-                className="img img-responsive"
-              />
-            </div>
-          )}
+          <label>Contact Number: </label>
+          <Input
+            type="text"
+            placeholder="Enter Your Phone Number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            required
+          />
         </div>
         <div className="mb-3">
           <button className="btn btn-primary" onClick={handleRepairRequest}>
