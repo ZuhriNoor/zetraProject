@@ -3,10 +3,11 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import "../../styles/CustomScrollbar.css";
+import "../../styles/Layout.css"
 
 const Layout = ({ children, title, description, keywords, author }) => {
   return (
-    <div>
+    <div className="layout-main">
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />

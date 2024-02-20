@@ -14,20 +14,20 @@ export default function Services() {
           <Link to="/services/repair" className="card-link">
             <div className="card">
               <div className="wrapper">
-                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" className="cover-image" alt="Cover" />
+              <img src="/images/repair.png"  className="cover-image" style={{width:"14rem",margin:"3rem",height:"14rem"}} alt="Cover" />
               </div>
-              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" className="title" alt="Title" />
-              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" className="character" alt="Character" />
+              <h1 className="title" style={{color:"black"}}alt="Title" >Repair </h1>
+              <img src="/images/repair.png"  className="character" style={{width:"5rem",margin:"14rem",height:"5rem"}} alt="Character" />
             </div>
           </Link>
           {/* Use Link component instead of anchor tags */}
           <Link to="/services/upgrade" className="card-link">
             <div className="card">
               <div className="wrapper">
-                <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" className="cover-image" alt="Cover" />
+                <img src="/images/upgrade.png" className="cover-image" style={{width:"14rem",margin:"3rem",height:"14rem"}} alt="Cover" />
               </div>
-              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" className="title" alt="Title" />
-              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" className="character" alt="Character" />
+              <h1 className="title" style={{color:"black"}}alt="Title" >Upgrade</h1>
+              <img src="/images/up.png" className="character" style={{width:"5rem",margin:"14rem",height:"5rem"}} alt="Character" />
             </div>
           </Link>
         </div>
