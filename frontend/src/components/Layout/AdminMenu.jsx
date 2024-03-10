@@ -52,13 +52,7 @@ const AdminMenu = () => {
           </ul>
           
         </div>
-        <NavLink
-          to="/dashboard/admin/users"
-          className="nav-link"
-          activeClassName="active"
-        >
-          Users
-        </NavLink>
+        
         <NavLink
             to="/dashboard/admin/help"
             className="nav-link"

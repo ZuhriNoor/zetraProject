@@ -11,7 +11,7 @@
 .register-form input[type="email"],
 .register-form input[type="password"]
 { /* Added specificity */
-  border-radius: 25px;
+  border-radius: 5px;
   padding: 5px;
   width: 94vw;
   height: 20px;
