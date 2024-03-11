@@ -46,9 +46,9 @@ const Register = () => {
 
   return (
     <Layout title={"Register"}>
-      <div className="help">
-        <h1 className="selling-title">Register</h1>
-        <div className="help-content">
+      <div className="register">
+        <h1 className="register-title">Register</h1>
+        <div className="register-content">
           <div className="register-form">
             <form className="row g-3" onSubmit={handleSubmit}>
               <div className="col-md-6">
@@ -57,8 +57,9 @@ const Register = () => {
                 </label>
                 <input
                   type="email"
-                  className="form-control"
+                  className="form-control register-input"
                   name="email"
+                  placeholder="Enter your email"
                   value={input.email}
                   onChange={handleChange}
                   required
@@ -70,8 +71,9 @@ const Register = () => {
                 </label>
                 <input
                   type="password"
-                  className="form-control"
+                  className="form-control register-input"
                   name="password"
+                  placeholder="Enter your password"
                   value={input.password}
                   onChange={handleChange}
                   required
@@ -83,7 +85,7 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control register-input"
                   name="name"
                   placeholder="Your Full Name"
                   value={input.name}
@@ -92,12 +94,12 @@ const Register = () => {
                 />
               </div>
               <div className="col-6">
-                <label htmlFor="address" className="form-label">
+                <label htmlFor="address" className="form-label ">
                   Address
                 </label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control register-input"
                   name="address"
                   placeholder="Enter your address"
                   value={input.address}
@@ -111,8 +113,9 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control register-input"
                   name="phone"
+                  placeholder="Enter your phone number"
                   value={input.phone}
                   onChange={handleChange}
                   required
@@ -124,30 +127,31 @@ const Register = () => {
                 </label>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control register-input"
                   name="answer"
+                  placeholder="Enter your childhood friend's name"
                   value={input.answer}
                   onChange={handleChange}
                   required
                 />
               </div>
-<div>
-              <div className="col-12">
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    name="gridCheck"
-                    required
-                  />
-                  <label className="form-check-label" htmlFor="gridCheck">
-                    I agree to the Terms</label><label>and Conditions
-                  </label>
+              <div>
+                <div className="col-12">
+                  <div className="form-check1">
+                    <input
+                      className="form-check-input1"
+                      type="checkbox"
+                      name="gridCheck"
+                      required
+                    />
+                    <label className="form-check-label1" htmlFor="gridCheck">
+                      I agree to the Terms and Conditions
+                    </label>
+                  </div>
                 </div>
               </div>
-              </div>
               <div className="col-12">
-                <button type="submit" className="signup-btn btn btn-primary">
+                <button type="submit" className="register-btn btn btn-primary">
                   Sign up
                 </button>
               </div>

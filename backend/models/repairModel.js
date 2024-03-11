@@ -10,6 +10,10 @@ const repairSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    buyer: {
+      type: mongoose.ObjectId,
+      ref: "user",
+    },
     description: {
       type: String,
       required: true,
@@ -18,6 +22,10 @@ const repairSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    type:{
+      type: String,
+      enum: ["Upgrade","Repair"]
+    }
   },
   { timestamps: true }
 );

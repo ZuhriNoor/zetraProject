@@ -91,7 +91,7 @@ const AdminSellOrders = () => {
                         </Select>
                       </td>
                       <td>{o?.brand}</td>
-                      <td>{moment(o?.createAt).fromNow()}</td>
+                      <td>{moment(o?.createdAt).fromNow()}</td>
                       <td>{o?.spec}</td>
                       <td>{o?.desc}</td>
                       <td>{o?.seller?.name}</td>

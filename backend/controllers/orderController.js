@@ -201,7 +201,9 @@ export const repairRequestController = async (req, res) => {
       model,
       category,
       description,
-      phone
+      phone,
+      buyer: req.user._id,
+      type: "Repair"
     });
 
     await repairRequest.save();
@@ -217,6 +219,67 @@ export const repairRequestController = async (req, res) => {
       success: false,
       error,
       message: "Error in sending repair request",
+    });
+  }
+};
+
+export const upgradeRequestController = async (req, res) => {
+  try {
+    const { model, category, description, phone } = req.body;
+
+    //validation
+    switch (true) {
+      case !category:
+        return res.status(500).send({ error: "Name is Required" });
+        case !model:
+        return res.status(500).send({ error: "Model is Required" });
+      case !description:
+        return res.status(500).send({ error: "Email is Required" });
+    }
+
+    const repairRequest = await new repairModel({
+      model,
+      category,
+      description,
+      phone,
+      buyer: req.user._id,
+      type: "Upgrade"
+    });
+
+    await repairRequest.save();
+
+    res.status(201).send({
+      success: true,
+      message: "Upgrade request sent Successfully",
+      repairRequest,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      error,
+      message: "Error in sending upgrade request",
+    });
+  }
+};
+
+//get all repair requests
+export const getRepairRequestController = async (req, res) => {
+  try {
+    const helpRequest = await repairModel
+      .find({})
+      .populate("buyer", "name")
+      .populate("model", "description")
+      .populate("phone", "type")
+      .populate("createdAt")
+      .sort({ createdAt: "-1" });
+    res.json(helpRequest);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error While Getting Sell Orders",
+      error,
     });
   }
 };

@@ -5,3 +5,28 @@ footer {
   overflow-x: "hidden";
   bottom: 0px;
 }
+.footer-container {
+  /* Set your desired background color */
+ color: white; /* Set text color for better visibility on the dark background */
+ padding: 2rem 7rem; /* Add padding for better spacing */
+ display: flex;
+ justify-content: space-around; /* Adjust the alignment as needed */
+ align-items: flex-start; /* Adjust the alignment as needed */
+}
+
+.contact-details,
+.additional-info {
+ flex: 1;
+ text-align: left; /* Adjust text alignment as needed */
+}
+
+h2 {
+ font-size: 1.5rem; /* Set your desired font size for heading */
+}
+
+p {
+ font-size: 1rem; /* Set your desired font size for paragraphs */
+ margin: 0px 0; /* Add margin for better spacing between paragraphs */
+}
+
+/* Add more styles as needed */
