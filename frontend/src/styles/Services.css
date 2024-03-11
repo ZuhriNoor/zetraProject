@@ -23,8 +23,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5px;
-  padding: 2rem;
+  margin: 0px;
+  padding: 0rem;
   gap: 20px; /* Adjust the gap between cards */
   
 }
@@ -133,9 +133,9 @@
 .services-page .card .title {
   position: absolute;
   bottom: 10px; /* Adjust the distance from the bottom */
-  left: 50%; /* Move the image to the center horizontally */
+  left: 25%; /* Move the image to the center horizontally */
   margin-top: 10rem;
-  width: 50%;
+  width: fit-content;
   height: 4rem;
 }
 
