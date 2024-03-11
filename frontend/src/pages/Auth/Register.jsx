@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import toast from "react-hot-toast";
 import axios from "axios";
-import "../../styles/Register.css";
+import "../../styles/Register.css"; // Import register.css for styling
 
 const Register = () => {
   const [input, setInput] = useState({
@@ -46,115 +46,109 @@ const Register = () => {
 
   return (
     <Layout title={"Register"}>
-      <div className="register">
-        <h1 className="register-title">Register</h1>
-        <div className="register-content">
-          <div className="register-form">
-            <form className="row g-3" onSubmit={handleSubmit}>
-              <div className="col-md-6">
-                <label htmlFor="email" className="form-label">
-                  Email
-                </label>
+      <div className="login"> {/* Use login class for similar styling */}
+        <div className="login-content"> {/* Use login-content for similar structure */}
+          <div className="login-image">
+            <img
+              src="/images/register.jpg"
+              alt="Register"
+              className="img" // Add img class for styling
+            />
+          </div>
+          <div>
+            <h1 className="selling-title">Register</h1>
+            <form onSubmit={handleSubmit} className="login-form">
+              <label htmlFor="email">Email:</label>
+              <div className="login-input">
                 <input
                   type="email"
-                  className="form-control register-input"
+                  id="email"
                   name="email"
                   placeholder="Enter your email"
                   value={input.email}
                   onChange={handleChange}
+                  placeholder="Enter your email"
                   required
                 />
               </div>
-              <div className="col-md-6">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
+              <label htmlFor="password">Password:</label>
+              <div className="login-input">
                 <input
                   type="password"
-                  className="form-control register-input"
+                  id="password"
                   name="password"
                   placeholder="Enter your password"
                   value={input.password}
                   onChange={handleChange}
+                  placeholder="Enter your password"
                   required
                 />
               </div>
-              <div className="col-6">
-                <label htmlFor="name" className="form-label">
-                  Name
-                </label>
+              <label htmlFor="name">Name:</label>
+              <div className="login-input">
                 <input
                   type="text"
-                  className="form-control register-input"
+                  id="name"
                   name="name"
-                  placeholder="Your Full Name"
                   value={input.name}
                   onChange={handleChange}
+                  placeholder="Enter your name"
                   required
                 />
               </div>
-              <div className="col-6">
-                <label htmlFor="address" className="form-label ">
-                  Address
-                </label>
+              <label htmlFor="address">Address:</label>
+              <div className="login-input">
                 <input
                   type="text"
-                  className="form-control register-input"
+                  id="address"
                   name="address"
-                  placeholder="Enter your address"
                   value={input.address}
                   onChange={handleChange}
+                  placeholder="Enter your address"
                   required
                 />
               </div>
-              <div className="col-md-6">
-                <label htmlFor="phone" className="form-label">
-                  Phone
-                </label>
+              <label htmlFor="phone">Phone:</label>
+              <div className="login-input">
                 <input
                   type="text"
-                  className="form-control register-input"
+                  id="phone"
                   name="phone"
                   placeholder="Enter your phone number"
                   value={input.phone}
                   onChange={handleChange}
+                  placeholder="Enter your phone number"
                   required
                 />
               </div>
-              <div className="col-md-6">
-                <label htmlFor="answer" className="form-label">
-                  Your childhood friend name
-                </label>
+              <label htmlFor="answer">Childhood Friend's Name:</label>
+              <div className="login-input">
                 <input
                   type="text"
-                  className="form-control register-input"
+                  id="answer"
                   name="answer"
                   placeholder="Enter your childhood friend's name"
                   value={input.answer}
                   onChange={handleChange}
+                  placeholder="Enter your childhood friend's name"
                   required
                 />
               </div>
-              <div>
-                <div className="col-12">
-                  <div className="form-check1">
-                    <input
-                      className="form-check-input1"
-                      type="checkbox"
-                      name="gridCheck"
-                      required
-                    />
-                    <label className="form-check-label1" htmlFor="gridCheck">
-                      I agree to the Terms and Conditions
-                    </label>
-                  </div>
+              <div className="login-input">
+                <div className="form-check">
+                  <input
+                    className="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    required
+                  />
+                  <label className="form-check-label m-2" htmlFor="gridCheck">
+                    I agree to the Terms
+                     and Conditions
+                  </label>
                 </div>
               </div>
-              <div className="col-12">
-                <button type="submit" className="register-btn btn btn-primary">
-                  Sign up
-                </button>
-              </div>
+              <button type="submit" className="register-btn">Sign up</button>
             </form>
           </div>
         </div>

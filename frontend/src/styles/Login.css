@@ -1,5 +1,4 @@
-/* register.css */
-
+/* login.css */
 .login-content {
   display: flex;
   flex-direction: column;
@@ -12,9 +11,10 @@
 .login-form {
   background-color: #4f4f4f;
   color: white;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 20px;
+  width: fit-content;
 }
 
 .login-input {
@@ -22,26 +22,17 @@
   margin-top: 0.3rem;
   margin-bottom: 1.3rem;
   border-radius: 20px;
-  width: 98%; /* Take up full width of login form */
-  height: fit-content;
+  width: 97%; /* Take up full width of login form */
 }
 
 .login-input input {
   border-radius: 25px;
-  padding: 19px;
-  width: 98%; /* Take up full width of input box */
+  padding: 13px;
+  width: 97%; /* Take up full width of input box */
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  height: 2.8rem;
-
 }
 
-.login-input[type="checkbox"],
-.login input[type="checkbox"]{
-  width: 1rem;
-  height: 1rem;
-}
-
-.register-btn {
+.login-btn {
   position: relative;
   width: 5rem;
   height: 3rem;
@@ -88,7 +79,7 @@
   }
 
   .login-image .img{
-    margin-right: 1rem; /* Add some space between image and form */
+    margin-right: 2rem; /* Add some space between image and form */
     height: 40vw;
   }
 
@@ -103,15 +94,9 @@
     align-items: center; /* Center content horizontally */
   }
 
-  .login-input[type="checkbox"],
-.login input[type="checkbox"]{
-  width: .5rem;
-  height: .5rem;
-}
-
   .login-image .img {
     margin-bottom: 1rem; /* Add some space between image and form */
-    height: 70vw; /* Set image height to 60vw in mobile view */
+    height: 100vw; /* Set image height to 60vw in mobile view */
   }
 
   .login-form {

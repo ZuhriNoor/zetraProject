@@ -1,9 +1,11 @@
+// login.jsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
+import "../../styles/Login.css"; // Import login.css for styling
 
 export default function Login() {
   const [input, setInput] = useState({
@@ -56,67 +58,50 @@ export default function Login() {
 
   return (
     <Layout title={"Login"}>
-      <div className="Login">
-        <div className="div">
-          <div className="text-wrapper">Login</div>
-          <div className="overlap">
-            <div className="text-wrapper-2">Email</div>
-            <p className="p">
-              Log into your account to purchase and sell products.
-            </p>
-          </div>
-          <div className="text-wrapper-3">Password</div>
-          <div className="overlap-group">
-            <input
-              type="email"
-              className="form-control"
-              name="email"
-              value={input.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              required
+      <div className="login"> {/* Use login class for similar styling */}
+        <div className="login-content"> {/* Use login-content for similar structure */}
+          <div className="login-image">
+            <img
+              src="/images/login.jpg"
+              alt="Login"
+              className="img" // Add img class for styling
             />
           </div>
-          <div className="div-wrapper">
-            <input
-              type="password"
-              className="form-control"
-              name="password"
-              value={input.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              required
-            />
-          </div>
-          
-          <div className="group">
-            <div className="text-wrapper-5">
-              <button
-                type="submit"
-                className="btn btn-primary"
-                onClick={handleSubmit}
-              >
-                Login
-              </button>
+          <div>
+            <h1 className="selling-title">Login</h1>
+            <form onSubmit={handleSubmit} className="login-form">
+              <label htmlFor="email">Email:</label>
+              <div className="login-input">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={input.email}
+                  onChange={handleChange}
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+              <label htmlFor="password">Password:</label>
+              <div className="login-input">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={input.password}
+                  onChange={handleChange}
+                  placeholder="Enter your password"
+                  required
+                />
+              </div>
+              <button type="submit" className="login-btn">Login</button>
+            </form>
+            <div className="forgotpassword-or-register">
+              <span onClick={handleForgotPasswordClick}>Forgot password?</span>
+              <span> | </span>
+              <span onClick={handleRegisterClick}>Register</span>
             </div>
           </div>
-          <div className="text-wrapper-6">
-            <span onClick={handleForgotPasswordClick}>Forgot password?</span>
-          </div>
-          <p className="don-t-have-an">
-            <span className="span">Don’t have an account? </span>
-            <span onClick={handleRegisterClick} className="text-wrapper-7">
-              Register
-            </span>
-          </p>
-          <p className="ZECTRA">
-          <img
-              src="/images/zetra-logo.png"
-              alt="ZETRA Logo"
-              style={{ maxHeight: "2.5rem" }}
-            />
-          </p>
-          
         </div>
       </div>
     </Layout>

@@ -14,20 +14,18 @@ export default function Services() {
           <Link to="/services/repair" className="card-link">
             <div className="card">
               <div className="wrapper">
-                <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" className="cover-image" alt="Cover" />
+              <img src="/images/repair.jpg"  className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
               </div>
-              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" className="title" alt="Title" />
-              <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" className="character" alt="Character" />
+              <h1 className="title" style={{color:"white"}}alt="Title" >Repair </h1>
             </div>
           </Link>
           {/* Use Link component instead of anchor tags */}
           <Link to="/services/upgrade" className="card-link">
             <div className="card">
               <div className="wrapper">
-                <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" className="cover-image" alt="Cover" />
+                <img src="/images/upgrade.jpg" className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
               </div>
-              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" className="title" alt="Title" />
-              <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" className="character" alt="Character" />
+              <h1 className="title" style={{color:"white"}}alt="Title" >Upgrade</h1>
             </div>
           </Link>
         </div>
