@@ -32,6 +32,7 @@ import Repair from "./pages/Repair";
 import Upgrade from "./pages/Upgrade";
 import Selling from "./pages/Selling";
 import HelpRequest from "./pages/Admin/HelpRequest";
+import AdminRepair from "./pages/Admin/AdminRepair";
 
 export default function App() {
   return (
@@ -59,6 +60,7 @@ export default function App() {
           <Route path="admin/orders" element={<AdminOrders />} />
           <Route path="admin/sellorders" element={<AdminSellOrders />} />
           <Route path="admin/help" element={<HelpRequest />} />
+          <Route path="admin/repair" element={<AdminRepair />} />
         </Route>
         <Route path="/productsold" element={<Productsold />} />
         <Route path="/sell" element={<Selling />} />

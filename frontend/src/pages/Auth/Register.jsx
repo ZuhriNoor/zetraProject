@@ -64,6 +64,7 @@ const Register = () => {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="Enter your email"
                   value={input.email}
                   onChange={handleChange}
                   placeholder="Enter your email"
@@ -76,6 +77,7 @@ const Register = () => {
                   type="password"
                   id="password"
                   name="password"
+                  placeholder="Enter your password"
                   value={input.password}
                   onChange={handleChange}
                   placeholder="Enter your password"
@@ -112,6 +114,7 @@ const Register = () => {
                   type="text"
                   id="phone"
                   name="phone"
+                  placeholder="Enter your phone number"
                   value={input.phone}
                   onChange={handleChange}
                   placeholder="Enter your phone number"
@@ -124,6 +127,7 @@ const Register = () => {
                   type="text"
                   id="answer"
                   name="answer"
+                  placeholder="Enter your childhood friend's name"
                   value={input.answer}
                   onChange={handleChange}
                   placeholder="Enter your childhood friend's name"

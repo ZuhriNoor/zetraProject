@@ -13,7 +13,7 @@ import {
   orderStatusController,
 } from "../controllers/authController.js";
 import { isAdmin, requireSignIn } from "../middlewares/authMiddleware.js";
-import { getAllSellOrdersController, getHelpRequestController, getSellOrdersController, helpRequestController, repairRequestController, sellOrderController, sellOrderStatusController } from "../controllers/orderController.js";
+import { getAllSellOrdersController, getHelpRequestController, getRepairRequestController, getSellOrdersController, helpRequestController, repairRequestController, sellOrderController, sellOrderStatusController, upgradeRequestController } from "../controllers/orderController.js";
 
 //router object
 const router = express.Router();
@@ -83,5 +83,11 @@ router.get("/all-help",requireSignIn, isAdmin, getHelpRequestController);
 
 //create repair request
 router.post("/create-repair-request", requireSignIn, repairRequestController);
+
+//create upgrade request
+router.post("/create-upgrade-request", requireSignIn, upgradeRequestController);
+
+//get all repair/upgrade request
+router.get("/all-repair", requireSignIn, isAdmin, getRepairRequestController);
 
 export default router;
