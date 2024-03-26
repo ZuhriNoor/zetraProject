@@ -15,8 +15,7 @@
 .service-title {
   text-align: center;
   font-size: 2.5em;
-  margin: 1rem;
-  padding: 2rem ;
+  margin-top: 2rem;
 }
 
 .services-page .card-container {
@@ -118,7 +117,7 @@
 
 .services-page .character {
   width: 100%;
-  opacity: 0;
+  opacity: 1;
   transition: all 0.5s;
   position: absolute;
   z-index: -1;
@@ -126,8 +125,7 @@
 }
 
 .services-page .card:hover .character {
-  opacity: 1;
-  transform: translate3d(0%, -30%, 100px);
+  transform: translate3d(0%, -5%, 100px);
 }
 
 .services-page .card .title {
@@ -144,13 +142,25 @@
   .services-page .card-container {
     flex-direction: column; /* Stack cards vertically */
     align-items: center; /* Center cards horizontally */
-    margin: 2rem;
-    padding: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 5rem;
   }
   .service-title {
     text-align: center;
     font-size: 1.5em;
-    margin-bottom: 3rem;
-    padding: 2rem ;
+    margin-bottom: 5rem;
+    padding-bottom: 8rem ;
+  }
+  .services-page .card {
+    width: 300px; /* Set a fixed width for the cards */
+    height: 400px; /* Set a fixed height for the cards */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ensure proper stacking */
+    justify-content: space-between; /* Adjust alignment */
+    
+    perspective: 2500px;
+    border: 0;
   }
 }
+
