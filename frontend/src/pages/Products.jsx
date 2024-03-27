@@ -184,22 +184,25 @@ const HomePage = () => {
         <hr className="products-line"/>
         <div className="col-md-9 products-list">
           <h1 className="text-center products-title">All Products</h1>
-          <div className="d-flex flex-wrap justify-content-center">
+          <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div
                 className="card m-2 products-card"
                 key={p._id}
                 onClick={() => navigate(`/product/${p.slug}`)}
               >
-                <img
+              <div className="products-image-container">
+              <img
                   src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top mx-auto"
                   alt={p.name}
                   style={{ width: "10rem", height: "10rem" }}
                 />
+              </div>
+                
                 <div className="card-body products-card-body">
-                  <h5 className="card-title">{p.name}</h5>
-                  <p className="card-text">{p.description.substring(0, 50)}...</p>
+                  <h5 className="card-title products-card-title">{p.name}</h5>
+                  <p className="card-text products-card-text">{p.description.substring(0, 50)}...</p>
                   <p className="card-text"> ₹ {p.price}</p>
                   <button
                     className="btn btn-primary ms-1 products-btn-1"

@@ -2,21 +2,33 @@
 .category-container {
     display: flex;
   }
+
+  .category-container1{
+    --bs-gutter-x: 0;
+  }
   
   .category-item {
     flex: 1;
-    margin: 15px;
+    margin: 1vw;
   }
   
   .category-link {
-    width: 100%;
+
     background-color: #de6f2c; /* New button color (a shade of blue) */
     color: #fff; /* Text color for better contrast */
     border: none;
+    width: 110px;
+    font-size: 0.8rem;
   }
 
   .category-link:hover{
     background-color: #404040;
-    
+  }
+
+  @media only screen and (max-width: 500px){
+    .category-link{
+      font-size: 0.8rem;
+      width: 100px;
+    }
   }
   

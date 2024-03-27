@@ -7,6 +7,15 @@
     margin: 0;
     padding: 0;
   }
+  .products-title{
+    text-align: center;
+  }
+  .product-filter-box{
+    width: 90vw;
+  }
+  .product-filter-box{
+    margin-left: 0rem;
+  }
 }
 
 .products-btn {
@@ -30,23 +39,38 @@
 .products-filter-title {
   margin: 1rem auto;
 }
-
+.product-filter-box{
+  margin-left: 2.5rem;
+}
 .products-title {
   margin: 2rem 0;
+  font-size: 1.8rem;
 }
 
 .products-card {
-  width: 18rem;
-  height: 24rem;
+  width: 16rem;
+  height: 25rem;
   align-self: center;
-  position: relative;
   padding: 1.5rem 0.2rem;
   cursor: pointer; /* Added cursor property */
+}
+.products-card-title{
+  font-size: 1rem;
+}
+
+.products-card-text{
+  font-size: 0.8rem;
 }
 
 .products-card-body {
   position: absolute;
   bottom: 0;
+}
+
+.products-image-container{
+  align-self: center;
+  height: 12rem;
+  width: 12rem;
 }
 
 .products-btn-1 {

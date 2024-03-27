@@ -1,0 +1,47 @@
+.orders-table{
+    border: 1px solid;
+    margin-bottom: 5rem;
+}
+
+.orders-table th, td{
+    border: 1px solid;
+    width: 20px;
+}
+
+.orders-product{
+    width: 30rem;
+}
+.orders-product-image{
+    height: 100px;
+    width: 100px;
+}
+
+.dashboard{
+    margin-left: 2rem;
+}
+
+@media only screen and (max-width: 500px){
+    .orders-table{
+        font-size: 0.8rem;
+        width: 90vw;
+        margin-left: 0rem;
+    }
+    .orders-title{
+        font-size: 1rem;
+    }
+    .orders-product{
+        width: 6.3rem;
+    }
+    .orders-product-image{
+        height: 50px;
+        width: 50px;
+    }
+    .orders-product p{
+        font-size: 0.5rem;
+        width: 5rem;
+    }
+    .dashboard{
+        margin-left: 0;
+    }
+}
+

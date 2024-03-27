@@ -41,7 +41,7 @@ const Header = () => {
 
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
+          <Link to="/" className="navbar-brand navbar-zetra">
             <img
               src="/images/zetra-logo.png"
               alt="ZETRA Logo"

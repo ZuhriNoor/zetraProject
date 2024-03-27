@@ -224,7 +224,7 @@ export const getAllOrdersController = async (req, res) => {
     const orders = await orderModel
       .find({})
       .populate("products", "-photo")
-      .populate("buyer", "name")
+      .populate("buyer")
       .sort({ createdAt: "-1" });
     res.json(orders);
   } catch (error) {

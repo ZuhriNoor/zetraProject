@@ -19,10 +19,20 @@
   .help-form {
     background-color: #4f4f4f;
   color: white;
-  padding: 5px;
+  padding: 2rem;
   margin: 5px;
   border-radius: 20px;
   width:fit-content;
+  }
+
+  @media only screen and (max-width: 500px){
+    .help-form{
+      padding: 0.7rem;
+    }
+    .help-btn{
+      width: 4rem;
+      height: 2.5rem;
+    }
   }
   
   .help-input {
@@ -74,7 +84,7 @@
   
   .help-btn {
     position: relative;
-    width:fit-content;
+    width: 7rem;
     height: 3rem;
     border-radius: 25px;
     background-color: #de6f2c;

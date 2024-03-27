@@ -1,3 +1,10 @@
+.navbar-nav{
+  margin-right: 2.5rem;
+}
+.navbar-zetra{
+  margin-left: 2.5rem;
+}
+
 footer {
   position: "relative";
   bottom: "0px";
@@ -6,27 +13,45 @@ footer {
   bottom: 0px;
 }
 .footer-container {
-  /* Set your desired background color */
- color: white; /* Set text color for better visibility on the dark background */
- padding: 2rem 7rem; /* Add padding for better spacing */
- display: flex;
- justify-content: space-around; /* Adjust the alignment as needed */
- align-items: flex-start; /* Adjust the alignment as needed */
+  color: white;
+  padding: 2rem 7rem;
+  display: flex;
+  justify-content: space-around;
 }
 
+.footer-title {
+  font-size: 1.5rem;
+}
+
+.footer-details {
+  font-size: 1rem;
+  margin: 0px 0;
+}
+.footer-title-primary {
+  text-align: center;
+}
 .contact-details,
 .additional-info {
- flex: 1;
- text-align: left; /* Adjust text alignment as needed */
+padding: 0 2.5rem;
 }
-
-h2 {
- font-size: 1.5rem; /* Set your desired font size for heading */
+@media only screen and (max-width: 501px) {
+  .navbar-nav{
+    margin-right: 0rem;
+  }
+  .navbar-zetra{
+    margin-left: 0rem;
+  }
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  .footer-details {
+    font-size: 0.7rem;
+  }
+  .footer-title-primary {
+    font-size: 0.8rem;
+  }
+  .contact-details,
+  .additional-info {
+    padding: 0 0;
+  }
 }
-
-p {
- font-size: 1rem; /* Set your desired font size for paragraphs */
- margin: 0px 0; /* Add margin for better spacing between paragraphs */
-}
-
-/* Add more styles as needed */

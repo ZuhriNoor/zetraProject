@@ -33,7 +33,7 @@
   }
 
   .home-card-title {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .home-card-text {
     font-size: 0.5rem;
@@ -64,12 +64,19 @@
     height: 11rem;
     width: 16rem;
     margin-top: 1rem;
-
+    
+  }
+  .home-card-title {
+    font-size: 0.9rem;
+  }
+  .home-card-text {
+    font-size: 0.8rem;
+    bottom: 1;
   }
 }
 
 
-/* Styles for the banner container */
+
 .banner-container {
   width: 100%;
   height: 100%;
@@ -79,15 +86,15 @@
 .banner-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* or use 'contain' depending on your preference */
+  object-fit: cover; 
 }
 
-/* Center the container */
+
 .featured-products-container {
   text-align: center;
 }
 
-/* Style for the heading */
+
 .featured-products-heading {
   font-family: "poppins", sans-serif;
   font-size: 2em;
@@ -97,25 +104,25 @@
   letter-spacing: 0px;
 }
 
-/* Responsive font size adjustments */
+
 @media only screen and (max-width: 600px) {
   .featured-products-heading {
-    font-size: 1em; /* Adjust the size for smaller screens */
+    font-size: 1em; 
   }
 }
 
 /* For WebKit Browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
-  width: 6px; /* Set the width of the scrollbar */
+  width: 6px; 
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #888; /* Set the color of the thumb */
-  border-radius: 6px; /* Set the border radius of the thumb */
+  background-color: #888; 
+  border-radius: 6px; 
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #f1f1f1; /* Set the color of the track */
+  background-color: #f1f1f1; 
 }
 
 /* Styles for the carousel items */
@@ -169,13 +176,3 @@
   text-align: left; /* Adjust text alignment as needed */
 }
 
-h2 {
-  font-size: 1.5rem; /* Set your desired font size for heading */
-}
-
-p {
-  font-size: 1rem; /* Set your desired font size for paragraphs */
-  margin: 0px 0; /* Add margin for better spacing between paragraphs */
-}
-
-/* Add more styles as needed */

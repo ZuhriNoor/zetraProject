@@ -70,7 +70,8 @@ export const getSellOrdersController = async (req, res) => {
       .populate("model", "spec")
       .populate("desc")
       .populate("donate")
-      .populate("seller", "name");
+      .populate("seller")
+      .sort({ createdAt: "-1" });
     res.json(orders);
   } catch (error) {
     console.log(error);

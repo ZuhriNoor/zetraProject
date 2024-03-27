@@ -82,7 +82,7 @@ const AdminOrders = () => {
                           ))}
                         </Select>
                       </td>
-                      <td>{o?.buyer?.name}</td>
+                      <td>{o?.buyer?.name + " , " + o?.buyer?.phone + " , " + o?.buyer?.address}</td>
                       <td>{moment(o?.createdAt).fromNow()}</td>
                       <td>{o?.payment.success ? "Success" : "Failed"}</td>
                       <td>{o?.products?.length}</td>

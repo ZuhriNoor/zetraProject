@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+import "./Orders.css";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -11,7 +12,9 @@ const Orders = () => {
   const [auth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/auth/orders`);
+      const { data } = await axios.get(
+        `${process.env.REACT_APP_API}/api/v1/auth/orders`
+      );
       setOrders(data);
     } catch (error) {
       console.log(error);
@@ -23,48 +26,53 @@ const Orders = () => {
   }, [auth?.token]);
   return (
     <Layout title={"Your Orders"}>
-      <div className="container-fluid dashboard" >
-        <div className="row" >
+      <div className="container-fluid dashboard">
+        <div className="row">
           <div className="col-md-3  p-3">
             <UserMenu />
           </div>
-          <div className="col-md-9" >
-            <h1 className="text-center">All Orders</h1>
+          <div className="col-md-9">
+            <h1 className="m-2">All Orders</h1>
             {orders?.map((o, i) => {
               return (
-                <div className="border shadow" >
-                  <table className="table" >
+                <div className="border shadow">
+                  <table className="table orders-table">
                     <thead>
+                    <h5 className="m-2 orders-title">Order {i+1}</h5>
                       <tr>
-                        <th scope="col">#</th>
                         <th scope="col">Status</th>
                         <th scope="col">Buyer</th>
-                        <th scope="col"> date</th>
-                        <th scope="col">Payment</th>
                         <th scope="col">Quantity</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>{i + 1}</td>
                         <td>{o?.status}</td>
                         <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createAt).fromNow()}</td>
-                        <td>{o?.payment.success ? "Success" : "Failed"}</td>
                         <td>{o?.products?.length}</td>
                       </tr>
-                    </tbody>
-                  </table>
-                  <div className="container" >
+                        <tr>
+                          <th scope="col">Date</th>
+                          <th scope="col">Payment</th>
+                          <th>Products</th>
+                        </tr>
+                      <tr>
+                        <td>{moment(o?.createdAt).fromNow()}</td>
+                        <td>{o?.payment.success ? "Success" : "Failed"}</td>
+                        <td>
+                        <div className="container">
                     {o?.products?.map((p, i) => (
-                      <div className="row mb-2 p-3 card flex-row" style={{width:"12rem"}} key={p._id}>
-                        <div className="col-md-4" style={{width:"125px", height:"100px"}}>
+                      <div
+                        className="row mb-2 card flex-row orders-product"
+                        key={p._id}
+                      >
+                        <div
+                          className="col-md-4 orders-product-image"
+                        >
                           <img
                             src={`${process.env.REACT_APP_API}/api/v1/product/product-photo/${p._id}`}
                             className="card-img-top"
                             alt={p.name}
-                            width="100px"
-                            height="100px"
                           />
                         </div>
                         <div className="col-md-8">
@@ -75,6 +83,11 @@ const Orders = () => {
                       </div>
                     ))}
                   </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
                 </div>
               );
             })}
