@@ -134,7 +134,7 @@ const HomePage = () => {
 
   return (
     <Layout title={"All Products - Best offers "}>
-      <div className="container-fluid row mt-3">
+      <div className="container-fluid row mt-3 mb-5">
         <div className="col-md-2 product-filter-box">
           <div className="d-flex flex-column m-2">
           <Collapse accordion>

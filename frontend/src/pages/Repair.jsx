@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Input, Select } from "antd";
+import "../styles/Repair.css";
 const { Option } = Select;
 
 const Repair = () => {
@@ -41,6 +42,7 @@ const Repair = () => {
 
   return (
     <Layout title={"Zetra - Repair"}>
+      <div className="Repair">
       <div className="container">
         <h1>Product Repair Request</h1>
         <label>Category: </label>
@@ -86,6 +88,7 @@ const Repair = () => {
             SUBMIT REPAIR REQUEST
           </button>
         </div>
+      </div>
       </div>
     </Layout>
   );

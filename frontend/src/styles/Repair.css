@@ -1,0 +1,42 @@
+/* Repair.css */
+
+.Repair .container {
+    
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    border: 2px solid #414141;
+  }
+  
+  .Repair .btn {
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 20px;
+    background-color: #de6f2c;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .Repair .btn:hover {
+    background-color: #c75f1f;
+  }
+  

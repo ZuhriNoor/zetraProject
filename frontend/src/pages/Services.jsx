@@ -14,18 +14,20 @@ export default function Services() {
           <Link to="/services/repair" className="card-link">
             <div className="card">
               <div className="wrapper">
-              <img src="/images/repair.jpg"  className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
+              <img src="/images/CARDBG.jpg"  className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
               </div>
-              <h1 className="title" style={{color:"white"}}alt="Title" >Repair </h1>
+              <h1 className="title pb-2" style={{color:"black"}}alt="Title" >Repair </h1>
+              <img src="/images/repair.png"  className="character" alt="Character" />
             </div>
           </Link>
           {/* Use Link component instead of anchor tags */}
           <Link to="/services/upgrade" className="card-link">
             <div className="card">
               <div className="wrapper">
-                <img src="/images/upgrade.jpg" className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
+                <img src="/images/CARDBG.jpg" className="cover-image" style={{width:"300px",margin:"0rem",height:"400px"}} alt="Cover" />
               </div>
-              <h1 className="title" style={{color:"white"}}alt="Title" >Upgrade</h1>
+              <h1 className="title pb-2" style={{color:"black"}}alt="Title" >Upgrade</h1>
+              <img src="/images/UPGRADE.png"  className="character" alt="Character" />
             </div>
           </Link>
         </div>

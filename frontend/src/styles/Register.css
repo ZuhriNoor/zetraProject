@@ -26,14 +26,7 @@
   height: fit-content;
 }
 
-.login-input input {
-  border-radius: 25px;
-  padding: 19px;
-  width: 98%; /* Take up full width of input box */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  height: 2.8rem;
 
-}
 
 .login-input[type="checkbox"],
 .login input[type="checkbox"]{
@@ -107,6 +100,10 @@
 .login input[type="checkbox"]{
   width: .5rem;
   height: .5rem;
+}
+
+.form-check-label {
+  font-size: 12px; /* Adjust the smaller font size as needed */
 }
 
   .login-image .img {

@@ -67,7 +67,6 @@ const Register = () => {
                   placeholder="Enter your email"
                   value={input.email}
                   onChange={handleChange}
-                  placeholder="Enter your email"
                   required
                 />
               </div>
@@ -80,7 +79,6 @@ const Register = () => {
                   placeholder="Enter your password"
                   value={input.password}
                   onChange={handleChange}
-                  placeholder="Enter your password"
                   required
                 />
               </div>
@@ -117,7 +115,6 @@ const Register = () => {
                   placeholder="Enter your phone number"
                   value={input.phone}
                   onChange={handleChange}
-                  placeholder="Enter your phone number"
                   required
                 />
               </div>
@@ -130,7 +127,6 @@ const Register = () => {
                   placeholder="Enter your childhood friend's name"
                   value={input.answer}
                   onChange={handleChange}
-                  placeholder="Enter your childhood friend's name"
                   required
                 />
               </div>

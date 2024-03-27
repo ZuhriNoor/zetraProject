@@ -3,7 +3,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
-import "../../styles/LoginPage.css";
+import "../../styles/ForgotPassword.css";
 
 
 const ForgotPassword = () => {
@@ -38,6 +38,7 @@ const ForgotPassword = () => {
 
   return (
     <Layout title="Forgot Password - Ecommerce App">
+      <div className="forgot-password">
       <div className="form-container ">
         <form onSubmit={handleSubmit}>
           <h4 className="title">RESET PASSWORD</h4>
@@ -80,6 +81,7 @@ const ForgotPassword = () => {
             RESET
           </button>
         </form>
+      </div>
       </div>
     </Layout>
   );
